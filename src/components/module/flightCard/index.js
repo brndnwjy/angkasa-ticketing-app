@@ -3,7 +3,9 @@ import styles from "./flightCard.module.css"
 
 const FlightCard = () => {
   return (
-    <div>FlightCard</div>
+    <div>
+      <h1>TEST SUBMIT</h1>
+    </div>
   )
 }
 
