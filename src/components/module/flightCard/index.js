@@ -4,7 +4,7 @@ import styles from "./flightCard.module.css"
 const FlightCard = () => {
   return (
     <div>
-      <h1>TEST SUBMIT COMPONENT</h1>
+      <h1>TEST SUBMIT</h1>
     </div>
   )
 }
