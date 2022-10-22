@@ -1,0 +1,9 @@
+.bodycontent{
+    background-color: red;
+    height: 100vh;
+}
+
+.leftside{
+    height: 100vh;
+    background-color: #FFFF;
+}
