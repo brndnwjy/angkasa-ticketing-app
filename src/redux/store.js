@@ -1,12 +1,12 @@
-import { createStore, applyMiddleware } from "redux";
-import { persistStore, persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage";
-import rootReducer from "./reducer/root.reducer";
-import logger from "redux-logger";
-import thunk from "redux-thunk";
+import { createStore, applyMiddleware } from 'redux';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import rootReducer from './reducers/root.reducer';
+import logger from 'redux-logger';
+import thunk from 'redux-thunk';
 
 const persistConfig = {
-  key: "data",
+  key: 'data',
   storage,
 };
 
