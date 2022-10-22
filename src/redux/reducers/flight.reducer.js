@@ -1,9 +1,9 @@
 const initialState = {
-  data: [],
+    data:[]
 };
 
 const flightReducer = (state = initialState, action) => {
-  return state;
+    return state
 };
 
 export default flightReducer;

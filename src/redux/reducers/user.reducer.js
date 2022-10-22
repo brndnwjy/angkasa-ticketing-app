@@ -1,7 +1,9 @@
-const initialState = { data: [] };
+const initialState = {
+    data:[]
+};
 
 const userReducer = (state = initialState, action) => {
-  return state;
+    return state
 };
 
 export default userReducer;
