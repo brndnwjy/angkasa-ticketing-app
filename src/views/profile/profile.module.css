@@ -1,0 +1,67 @@
+.rightsideProfile{
+    background-color: aquamarine;
+    height: 650px;
+    border-radius: 15px;
+    padding: 28px;
+}
+
+.title{
+    color: #2395FF;
+    font-size: 14px;
+}
+
+.subtitle{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.detailProfile{
+    margin-top: 40px;
+}
+
+.contact{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.iconArrow{
+   height: 20px;
+   margin-top: 20px;
+   margin-left: 25px;
+}
+
+.biodata{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.labelForm{
+    font-size: 14px;
+    color: #9B96AB;
+}
+
+.inputProfile{
+    background-color: transparent;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #D2C2FFAD;
+}
+
+.accountSettings{
+    color: #2395FF;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* @media only screen and (max-width: 720px) {
+    .detailProfileright{
+        display: flex;
+        flex-direction: row;
+    }
+} */
+
+

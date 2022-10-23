@@ -1,9 +1,83 @@
-.bodycontent{
-    background-color: red;
-    height: 100vh;
+.searchBlue{
+    background-color: #2395FF ;
+    height: 176px;
+    border-radius: 0px 0px 20px 20px;
 }
 
+.whiteplane{
+    margin-top: 70px;
+    height: 50px;
+    margin-left: 50px;
+}
+
+.secFilter{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.secReset{
+    font-size: 16px;
+    font-weight: bold;
+    color: #2395FF;
+}
+
+.secTicket{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.secFound{
+    font-size: 18px;
+    color: #979797 ;
+    margin-left: -35px;
+}
+
+.secSort{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
 .leftside{
-    height: 100vh;
-    background-color: #FFFF;
+    height: 160vh;
+    background-color: aqua;
+    border-radius: 20px;
+    padding: 28px;
+}
+
+.arrowbtm{
+    height: 12px;
+}
+
+.titleFiltercollapse{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: start;
+    border: none;
+    background-color: transparent;
+}
+
+.btnarrow{
+    border: none;
+    background-color: transparent;
+}
+
+.valuecollapse{
+    font-size: 14px;
+}
+.setPrice{
+    color: #6B6B6B;
+    font-size: 12px;
+    
+}
+
+.price{
+    color: #2395FF;
+    font-size: 16px;
+    font-weight: bold;
 }

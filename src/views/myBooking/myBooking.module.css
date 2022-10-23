@@ -1,0 +1,26 @@
+.bookinghistory{
+    background-color: aquamarine;
+    height: 115px;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-left: 0 !important; 
+    margin-right: 0 !important;
+}
+
+.title{
+    color: #2395FF;
+}
+
+.subtitle{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.history{
+    color: #2395FF; 
+    text-align: right;
+    font-size: 17px;
+    font-weight: bold;
+    
+}

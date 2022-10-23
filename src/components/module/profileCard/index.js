@@ -10,10 +10,10 @@ const ProfileCard = () => {
   return (
     <>
       {/* profile card left */}
-      <section className='profilecard'>
+      <section className={styles.profilecard}>
         <div className='container'>
           <div className='row'>
-            <div className={`col-md-4 ${styles.cardProfile}`}>
+            <div className={styles.cardProfile}>
               <div className={`d-flex flex-row justify-content-center my-3 px-5 ${styles.picProfile}`}>
                 <img src={avatar}/>
               </div>

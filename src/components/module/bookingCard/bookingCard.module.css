@@ -13,19 +13,28 @@
 
 .codePlane{
     color: #979797;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .status{
     color: #7A7A7A ;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.statuspayment{
+    background-color: #FF7F23 ; 
+    height: 36px; 
+    border-radius: 5px;
+    justify-items: center;
+    margin-top: -15px;
 }
 
 .setStatus{
-    background-color: #FF7F23 ;
-    border-radius: 5px;
-    height: 26px;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: bold;
     color: #FFFFFF ;
+    margin-top: 5px;
     text-align: center;
 }
 
@@ -37,11 +46,12 @@
 .setDetail{
     color: #2395FF;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .arrowbtm{
     color: #2395FF;
     position: absolute;
     right: 80px;
-    bottom: 8px;
+    bottom: 20px;
 }

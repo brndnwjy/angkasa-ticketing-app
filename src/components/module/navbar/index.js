@@ -5,7 +5,7 @@ import logo from '../../../assets/logo.svg';
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-light ">
+      <nav className={`navbar navbar-expand-lg bg-light ${styles.navi}`}>
         <div className={`${styles.containerNav} container-fluid ms-5`}>
           <a className={`${styles.containerLogo} navbar-brand`} href="#">
             <img className={styles.logo} src={logo} alt="Bootstrap" width="30" height="24" />
