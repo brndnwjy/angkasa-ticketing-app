@@ -1,7 +1,9 @@
 .CardBooking{
-    background-color: aqua;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 28px;
     height: 223px;
+    margin-bottom: 25px;
     border-radius: 15px;
     position: relative;
 }
@@ -54,4 +56,23 @@
     position: absolute;
     right: 80px;
     bottom: 20px;
+}
+
+@media only screen and (max-width: 720px) {
+   .iconsFlight img{
+    margin-right: 15px;
+   }
+
+   .statuspayment{
+    margin-left: 10px;
+    width: 170px;
+   }
+
+   .setDetail{
+    margin-left: -100px;
+   }
+   .arrowbtm{
+    display: none;
+   }
+    
 }

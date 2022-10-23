@@ -13,7 +13,7 @@ const MyBooking = () => {
         <div className='container my-5'>
           <div className='row'>
             <div className='col-md-4'>
-               <div className='leftside mx-3'>
+               <div className={`mx-3 ${styles.leftside}`}>
                   <ProfileCard/>
                 </div>
             </div>
@@ -26,6 +26,7 @@ const MyBooking = () => {
                 </div>
               </div>         
               <div className='rightside'>
+                <BookingCard/>
                 <BookingCard/>
               </div>
            </div>          

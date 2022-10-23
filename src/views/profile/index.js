@@ -26,7 +26,7 @@ const Profile = () => {
                   Profile
                 </p>
                 <div className='d-flex flex-column flex-md-row my-4 detailProfile'>
-                  <div className='col-md-5 me-4'>
+                  <div className='col-md-6 me-4'>
                     <div className='d-flex flex-column detailProfileleft'>
                       <p className={styles.contact}>
                         Contact

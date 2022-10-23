@@ -1,5 +1,6 @@
 .bookinghistory{
-    background-color: aquamarine;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     height: 115px;
     border-radius: 15px;
     padding: 20px;
@@ -22,5 +23,24 @@
     text-align: right;
     font-size: 17px;
     font-weight: bold;
+    
+}
+
+@media only screen and (max-width: 720px) {
+    .leftside{
+        display: none;
+    }
+
+    .bookinghistory{
+        margin-top: -47px;
+    }
+
+    .history{
+        margin-left: 55px;
+    }
+
+    .rightside{
+        
+    }
     
 }

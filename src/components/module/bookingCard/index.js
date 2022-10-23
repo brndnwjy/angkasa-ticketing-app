@@ -17,8 +17,8 @@ const BookingCard = () => {
             <div className='col-md-1 '>
               <h3>IDN</h3>
             </div>
-            <div className='col-md-1'>
-              <img src={iconflight} className="ms-3" />
+            <div className={`col-md-1 ${styles.iconsFlight}`}>
+              <img src={iconflight} className='ms-3' />
             </div>
             <div className='col-md-1 '>
               <h3>JPN</h3>
@@ -43,9 +43,6 @@ const BookingCard = () => {
             </div>
           </div>
         </div>
-      
-
-
     </>
   )
 }

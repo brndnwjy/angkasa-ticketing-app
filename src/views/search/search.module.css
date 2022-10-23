@@ -37,15 +37,10 @@
     font-weight: bold;
 }
 
-
-
-
-
-
-
 .leftside{
     height: 160vh;
-    background-color: aqua;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     padding: 28px;
 }

@@ -209,6 +209,8 @@ const Search = () => {
             </div>
             <div className='col-md-8'>
               <FlightCard />
+              <FlightCard />
+
             </div>
           </div>
         </div>
