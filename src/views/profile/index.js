@@ -58,7 +58,10 @@ const Profile = () => {
                       <label for="Postcode" className={`mt-3 ms-3 ${styles.labelForm}`}>Post Code</label>
                       <input type="text" className={styles.inputProfile} id="Postcode" placeholder="55555"/>
                     </div>
-                                       
+                    <div className=' d-grid gap-2 d-md-flex justify-content-md-end me-5'>
+                      <button type="button" class="btn btn-primary mt-3 ">Save</button>        
+                    </div>
+                            
                   </div>
                 </div>
               </div>
