@@ -56,10 +56,19 @@
     outline: none;
 }
 
-.btncostum1{
+.btncostum{
     color: #FFFFFF;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 16px;  
+    border: none;
+    background-color: transparent;
+}
+
+.btncostum:hover{
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 16px;  
+    outline: 1px;
 }
 
 
@@ -143,4 +152,43 @@
     color: #2395FF;
     font-size: 16px;
     font-weight: bold;
+}
+
+
+@media only screen and (max-width: 720px) {
+    .whiteplane{
+        height: 20px;
+        margin-right: -150px ;
+        margin-top: 20px;
+    }
+    .pFromto{
+        margin-top: -70px;
+    }
+    .setInput{
+        margin-top: -30px;
+    }
+    .btncostum{
+        margin-left: -570px;
+    }
+    .searchBlue{
+        height: max-content;
+    }
+    .secReset{
+        margin-left: 250px;
+    }
+    .secTicket{
+        display: none;
+    }
+    .secFound{
+        margin-left: 10px;
+    }
+    .secSort{
+        margin-left: 120px;
+    }
+
+    .leftside{
+        position: absolute;
+        visibility:hidden;
+        display: none;
+    }
 }

@@ -10,7 +10,6 @@ import iconarrowbtm from '../../../assets/btnback.svg'
 const FlightCard = () => {
   return (
     <>
-
       <div className={styles.Cardflights}>
         <div className='d-flex flex-row align-items-center mb-3'>
           <img src={AirlineGaruda} className='me-5' />
@@ -22,7 +21,7 @@ const FlightCard = () => {
             <p>12:33</p>
           </div>
           <div className='col-md-1'>
-            <img src={iconflight} className="ms-3 mt-3" />
+            <img src={iconflight} className="ms-3 mt-3 iconplane" />
           </div>
           <div className='col-md-1 '>
             <h2>JPN</h2>
@@ -32,17 +31,17 @@ const FlightCard = () => {
             <p className={styles.hours}>3 hours 11 minutes</p>
             <p className={styles.transit}>(1transit)</p>
           </div>
-          <div className='col-md-2'>
+          <div className={`col-md-2 col-3 ${styles.seticon}`}>
             <img src={iconluggage} className="mx-1 mt-4" />
             <img src={iconlunch} className="mx-1 mt-4" />
             <img src={iconwifi} className="mx-1 mt-4" />
           </div>
           <div className='col-md-2'>
 
-            <p className='mt-4'> <span style={{ color: '#2395FF' }}> $ 214,00</span> /pax</p>
+            <p className={`mt-4 ${styles.setPrice}`}> <span style={{ color: '#2395FF' }}> $ 214,00</span> /pax</p>
           </div>
           <div className='col-md-2'>
-            <button className='btn btn-primary mt-4'>SELECT</button>
+            <button className={`btn btn-primary mt-4 ${styles.btncostum}`}>SELECT</button>
           </div>
         </div>
         <div className='d-flex flex-row'>

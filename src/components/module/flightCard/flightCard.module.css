@@ -30,5 +30,36 @@
 
 }
 
+@media only screen and (max-width: 720px) {
+   .btncostum{
+    margin-left: -100px;
+    position: absolute;
+    visibility:hidden;
+    display: none;
+   }
+
+   .hours{
+    display: none;
+   }
+   .transit{
+    display: none;
+   }
+   .seticon{
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: 20px;
+    /* width: 50px; */
+   }
+   .setPrice{
+    margin-left: -20px;
+   }
+   .view{
+    margin-top: -10px;
+   }
+   .arrowbtm{
+    margin-top: -10px;
+   }
+}
+
 
 

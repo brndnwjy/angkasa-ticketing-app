@@ -28,11 +28,11 @@ const Search = () => {
                       </p>
                       <p className={styles.pFromto}> To </p>
                     </div>
-                    <div className='d-flex flex-row'>
+                    <div className={`d-flex flex-row ${styles.setInput}`}>
                     <input type="text" className={`ms-2 mb-3 ${styles.inputFormto}`} id="address" placeholder="Medan(IDN)"/> 
                       <img src={ArrowWhite} className='mx-3 mb-3'/>
                       <input type="text" className={`mb-3 ${styles.inputToForm}`} id="address" placeholder="Tokyo(JPN)"/> 
-                      <button type="button" className={`btn ${styles.btncostum1}`}>Change Search</button> 
+                      <button type="button" className={styles.btncostum}>Change Search</button> 
                     </div>
                     <div className='d-flex flex-row'>
                       <p className={`ms-2 ${styles.pDay}`}>
