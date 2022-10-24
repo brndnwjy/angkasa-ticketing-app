@@ -6,6 +6,8 @@ import Footer from '../../components/module/footer';
 import plane from '../../assets/logowhite.svg'
 import iconarrowbtm from '../../assets/btnback.svg'
 import SortArrow from '../../assets/sortarrow.svg'
+import ArrowWhite from '../../assets/arrowwhite.svg'
+import dotWhite from '../../assets/dotwhite.svg'
 
 
 const Search = () => {
@@ -17,18 +19,32 @@ const Search = () => {
           <div className='row'>
             <div className='col-md-12'>
               <div className={styles.searchBlue}>
-                <div className={`d-flex flex-row ${styles.setSearch}`}>
-                  <img src={plane} className={`col-md-2 ${styles.whiteplane}`} />
-                  <div className='col-md-3'>
-                    <p>
+                <div className='d-flex flex-column flex-md-row'>
+                  <img src={plane} className={styles.whiteplane}/>
+                  <div className='col-md-10'>
+                    <div className='d-flex flex-row mt-5'>
+                      <p className={`ms-2 ${styles.pFromto}`}>
                       From
-                    </p>
-
-                    <p> To</p>
-                    <p> Monday, 20 July 20</p>
+                      </p>
+                      <p className={styles.pFromto}> To </p>
+                    </div>
+                    <div className='d-flex flex-row'>
+                    <input type="text" className={`ms-2 mb-3 ${styles.inputFormto}`} id="address" placeholder="Medan(IDN)"/> 
+                      <img src={ArrowWhite} className='mx-3 mb-3'/>
+                      <input type="text" className={`mb-3 ${styles.inputToForm}`} id="address" placeholder="Tokyo(JPN)"/> 
+                      <button type="button" className={`btn ${styles.btncostum1}`}>Change Search</button> 
+                    </div>
+                    <div className='d-flex flex-row'>
+                      <p className={`ms-2 ${styles.pDay}`}>
+                      Monday, 20 July 20
+                      </p>
+                      <img src={dotWhite} className='mx-2 mb-3'/>
+                      <p className={styles.pPassanger}> 6 Passenger</p>
+                      <img src={dotWhite} className='mx-2 mb-3'/>
+                      <p className={styles.pEconomy}>  Economy</p>
+                    </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -40,7 +56,7 @@ const Search = () => {
             <div className='col-md-4'>
               <div className='d-flex flex-row'>
                 <p className={`col-md-10 mt-3 ${styles.secFilter}`}>
-                  Filters
+                  Filter
                 </p>
                 <p className={`mt-4 ${styles.secReset}`}> Reset </p>
               </div>

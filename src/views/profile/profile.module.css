@@ -54,6 +54,10 @@
     border-color: #D2C2FFAD;
 }
 
+.inputProfile:focus{
+    outline: none;
+}
+
 .accountSettings{
     color: #2395FF;
     font-size: 16px;

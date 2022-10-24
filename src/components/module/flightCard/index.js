@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "./flightCard.module.css"
 import AirlineGaruda from '../../../assets/airline.png'
 import iconflight from '../../../assets/flight.svg'
-import iconlunggage from '../../../assets/lunggage.svg'
+import iconluggage from '../../../assets/lunggage.svg'
 import iconlunch from '../../../assets/lunch.svg'
 import iconwifi from '../../../assets/wifi.svg'
 import iconarrowbtm from '../../../assets/btnback.svg'
@@ -33,7 +33,7 @@ const FlightCard = () => {
             <p className={styles.transit}>(1transit)</p>
           </div>
           <div className='col-md-2'>
-            <img src={iconlunggage} className="mx-1 mt-4" />
+            <img src={iconluggage} className="mx-1 mt-4" />
             <img src={iconlunch} className="mx-1 mt-4" />
             <img src={iconwifi} className="mx-1 mt-4" />
           </div>
