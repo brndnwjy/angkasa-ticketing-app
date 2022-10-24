@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <div className="row bg-light">
+        <div className="row ">
           <div className="col-4">
             <div className={`${styles.container1} container-fluid`}>
               <img className={styles.logo1} src={logo} />
@@ -65,7 +65,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="row bg-light">
+        <div className="row ">
           <div className="col-6 ">
             <p className={styles.p1}>© Insan Cita Tech. All Rights Reserved.</p>
           </div>
