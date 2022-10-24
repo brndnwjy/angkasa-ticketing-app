@@ -1,0 +1,401 @@
+.benner {
+  background-color: #2395ff;
+  width: 100%;
+  height: 176px;
+  border-radius: 0px 0px 30px 30px;
+  justify-content: space-around;
+  display: flex;
+}
+
+.textPerson {
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: -61rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.fd {
+  color: white;
+  position: absolute;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-left: 40rem;
+  font-style: normal;
+}
+
+.vd {
+  position: absolute;
+  color: white;
+  font-weight: 600;
+  margin-top: 57px;
+  margin-left: 70rem;
+  font-size: 16px;
+}
+
+/* .logoC {
+  width: 200px;
+  height: 200px;
+  color: white;
+} */
+
+.c1 {
+  height: 200vh;
+}
+
+.cForm {
+  background-color: white;
+  margin-top: -4rem;
+  margin-left: 4.5rem;
+  height: 400px;
+  border-radius: 15px;
+}
+.group {
+  margin-left: 1.7rem;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 45px;
+}
+input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 650px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+input:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+  color: #9b96ab;
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label,
+input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #9b96ab;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+  position: relative;
+  display: block;
+  width: 650px;
+}
+.bar:before,
+.bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #2395ff;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 200px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state
+input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+} */
+
+.alert {
+  width: 650px;
+  margin-top: 2.5rem !important;
+}
+
+.phone {
+  width: 650px !important;
+}
+.grup1 {
+  padding-top: 2rem;
+}
+.f {
+  padding-top: 2rem;
+}
+/* ANIMATIONS ================
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #2395ff;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #2395ff;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: #2395ff;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+} */
+
+.pd {
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 4.5rem;
+  margin-top: 3rem;
+}
+.containerFormPD {
+  background-color: white;
+  margin-top: 1.7rem;
+  margin-left: 4.5rem;
+  height: 400px;
+  border-radius: 15px;
+}
+
+.containerFPD {
+  background-color: white;
+  margin-top: 1.7rem;
+  margin-left: 4.5rem;
+  height: 150px;
+  border-radius: 15px;
+}
+
+.contentForm {
+  width: 650px;
+  padding-top: 2rem !important;
+}
+
+.alert1 {
+  width: 650px;
+  margin-left: 1.7rem;
+}
+
+.national {
+  color: #9b96ab;
+  margin-bottom: 1rem !important ;
+}
+
+.Ti {
+  color: black;
+  margin-left: 3rem !important;
+  font-size: 25px;
+}
+
+.dollar {
+  margin-left: 30rem;
+  color: #9b96ab;
+}
+
+.Tn {
+  font-weight: 500;
+}
+
+.buttonW {
+  border-top: none;
+  border-left: none;
+}
+
+.Fi {
+  border-top: none;
+  border-right: none;
+}
+
+.fc {
+  margin-left: 2rem;
+}
+
+.hr {
+  margin-left: 3.6rem;
+}
+
+.gt {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  margin-left: 2rem;
+}
+.d1 {
+  color: #2395ff;
+  font-weight: 600;
+}
+.sa {
+  margin-left: 16rem;
+}
+
+.garuda {
+  background-color: white;
+  width: 442px !important;
+  height: 375px;
+  margin-top: -4rem;
+  border-radius: 15px;
+  margin-left: 1rem;
+}
+
+.imgGaruda {
+  margin-top: 2rem;
+  margin-left: 4rem;
+}
+.textGr {
+  color: #595959;
+  font-weight: 500;
+  font-size: 16px;
+
+  margin-left: 12rem;
+}
+.text1 {
+  margin-top: -2.4rem !important;
+}
+
+.buttonA {
+  margin-left: 16rem;
+  margin-top: 2rem;
+  width: 319px;
+  height: 57px;
+  background-color: #2395ff !important;
+  box-shadow: 0px 8px 10px rgba(35, 149, 255, 0.3);
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+}
+
+.imgFL {
+  margin-left: 12.8rem;
+  margin-top: -3.6rem;
+}
+
+.location {
+  margin-top: 2rem;
+}
+
+.TextM {
+  margin-top: 3.6rem;
+  margin-left: 4rem;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.TextMT {
+  margin-left: 16rem;
+  margin-top: -3.2rem;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.sunday {
+  margin-left: 4rem;
+  margin-top: 1rem;
+}
+
+.textS {
+  font-weight: 400;
+  font-size: 12px;
+  color: #6b6b6b;
+}
+
+.textA {
+  font-weight: 400;
+  font-size: 18px;
+  color: #6b6b6b;
+  margin-left: 1rem;
+}
+.textB {
+  font-weight: 400;
+  font-size: 12px;
+  color: #6b6b6b;
+  margin-left: 1rem;
+}
+.ceklis {
+  margin-left: 4rem;
+  margin-top: 1rem;
+}
+.r {
+  font-weight: 500;
+  font-size: 14px;
+  color: #2395ff;
+  margin-left: 0.6rem;
+}
+
+.c {
+  margin-top: 0.7rem;
+  font-weight: 500;
+  font-size: 14px;
+  color: #2395ff;
+  margin-left: 0.6rem;
+}
+
+.hrQ {
+  margin-top: 1rem;
+}
+
+.tp {
+  margin-left: 4rem;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.dollar2 {
+  margin-left: 7rem;
+  font-weight: 600;
+  font-size: 24px;
+  color: #2395ff;
+}
+
+.v {
+  width: 12px;
+  height: 12px;
+  font-weight: 600;
+  margin-top: -5rem !important;
+  margin-left: 1rem !important;
+  color: #2395ff;
+}
