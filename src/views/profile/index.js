@@ -1,14 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./profile.module.css";
 import ProfileCard from '../../components/module/profileCard';
 import Navbar from '../../components/module/navbar';
 import Footer from '../../components/module/footer';
 import Arrowright from '../../assets/btnbackright.svg'
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { detailProfile } from '../../redux/actions/user.action';
 
 const Profile = () => {
+  // const dataProfile = JSON.parse(localStorage.getItem('data'));
+  const dispatch = useDispatch()
+  const dataprofile = useSelector((state) => {
+    return state.dataprofile
+  })
+
+  const {user_id} = useParams();
+  console.log(user_id)
+
+  useEffect(() => {
+    dispatch(
+      detailProfile(user_id)
+    )
+    },[])
+
+// console.log(user_id)
+  
+
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
+      {JSON.stringify(dataprofile)}
       <main className='bodycontent'>
         <div className='container my-5'>
           <div className='row'>
@@ -27,12 +50,21 @@ const Profile = () => {
                 </p>
                 <div className='d-flex flex-column flex-md-row my-4 detailProfile'>
                   <div className='col-md-6 me-4'>
+                  
                     <div className='d-flex flex-column detailProfileleft'>
                       <p className={styles.contact}>
                         Contact
                       </p>
-                      <label for="email" className={`mt-3 ms-3 ${styles.labelForm}`}>Email address</label>
-                      <input type="email" className={styles.inputProfile} id="email" placeholder="name@example.com" />
+                      {/* {
+                          dataprofile.data.map((item, index) => (
+                            <div key={index} > 
+                              <label   for="email" className={`mt-3 ms-3 ${styles.labelForm}`}>Email address</label>
+                              <input type="email" className={styles.inputProfile} id="email" placeholder='aasdwa'/> 
+                              {item.email}                             
+                            </div>              
+                          ))
+                      }  */}
+                     
 
                       <label for="phone" className={`mt-3 ms-3 ${styles.labelForm}`}>Phone Number</label>
                       <input type="text" className={styles.inputProfile} id="phone" placeholder="+6281987654321"/>        

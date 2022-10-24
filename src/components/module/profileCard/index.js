@@ -5,8 +5,11 @@ import iconprofile from '../../../assets/user.png'
 import iconstar from '../../../assets/myreview.svg'
 import iconsettings from '../../../assets/setting.svg'
 import iconlogout from '../../../assets/logout.svg'
+import { Link, useNavigate } from 'react-router-dom'
 
 const ProfileCard = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       {/* profile card left */}
@@ -54,12 +57,15 @@ const ProfileCard = () => {
                   <p className={`mx-5 ${styles.textMyreview}`}> My Review </p>
               </div>
               <div className={`d-flex flex-row mx-3 ${styles.setSettings}`}> 
-                  <img src={iconsettings} className={styles.iconsettings}/> 
+              <Link to={`/profile`}>
+                 <img src={iconsettings} className={styles.iconsettings}/> 
                   <p className={`mx-5 ${styles.textSettings}`}> Settings </p>
+              </Link>
+                 
               </div>
               <div className={`d-flex flex-row mx-3 ${styles.setLogout}`}> 
                   <img src={iconlogout} className={styles.iconlogout}/> 
-                  <p className={`mx-5 ${styles.textLogout}`}> Settings </p>
+                  <p className={`mx-5 ${styles.textLogout}`}> Logout </p>
               </div>
             </div>
           </div>
