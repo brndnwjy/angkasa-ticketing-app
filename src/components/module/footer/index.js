@@ -13,7 +13,7 @@ const Footer = () => {
     <>
       <footer>
         <div className="row ">
-          <div className="col-4">
+          <div className="col-4 mt-5">
             <div className={`${styles.container1} container-fluid`}>
               <img className={styles.logo1} src={logo} />
               <h2 className={styles.ankasa1}>Ankasa</h2>
@@ -24,9 +24,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-2 ">
+          <div className="col-2 mt-5 ">
             <div className={styles.container2}>
-              <h4>Features</h4>
+              <h4 className={styles.fo}>Features</h4>
               <div className={styles.containerImg}>
                 <ul className={styles.list}>
                   <li className={styles.listLi}>
@@ -45,18 +45,18 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-3">
+          <div className="col-3 mt-5">
             <div className={styles.container3}>
-              <h4>Download Angkasa app</h4>
+              <h4 className={styles.fo}>Download Angkasa app</h4>
               <div className={styles.containerImg}>
                 <img className={styles.img1} src={appstore} />
                 <img className={styles.img2} src={googlestore} />
               </div>
             </div>
           </div>
-          <div className="col-3">
+          <div className="col-3 mt-5">
             <div className={styles.container4}>
-              <h4>Follow Us</h4>
+              <h4 className={styles.fo}>Follow Us</h4>
               <img className={styles.imgOne} src={facebook} />
               <img className={styles.imgTwo} src={youtube} />
               <img className={styles.imgTwo} src={twitter} />

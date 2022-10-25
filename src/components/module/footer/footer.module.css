@@ -76,6 +76,11 @@ h4 {
   margin-top: 30px;
   margin-bottom: 120px;
 }
+.fo {
+  font-weight: 500;
+  font-size: 19px;
+  color: black;
+}
 
 .listLi {
   margin-bottom: 10px;

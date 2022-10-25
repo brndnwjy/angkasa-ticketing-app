@@ -5,11 +5,7 @@ import logo from '../../../assets/logo.svg';
 const Navbar = () => {
   return (
     <>
-<<<<<<< HEAD
-      <nav className={`navbar navbar-expand-lg bg-light ${styles.navi}`}>
-=======
       <nav className="navbar navbar-expand-lg  ">
->>>>>>> views/A
         <div className={`${styles.containerNav} container-fluid ms-5`}>
           <a className={`${styles.containerLogo} navbar-brand`} href="#">
             <img className={styles.logo} src={logo} alt="Bootstrap" width="30" height="24" />
@@ -24,8 +20,8 @@ const Navbar = () => {
             <form className={`${styles.input} d-flex `} role="search">
               <input className={`${styles.search} form-control `} type="search" placeholder="Where you want to go?" aria-label="Search" />
             </form>
-            <ul className="navbar-nav me-auto ms-5 mb-2 mb-lg-0">
-              <li className={`${styles.menuText} nav-item`}>
+            <ul className="navbar-nav me-auto ms-5 mb-2 mb-lg-0 ">
+              <li className={`${styles.menuText} nav-item `}>
                 <a className=" nav-link active" aria-current="page" href="#">
                   Find Ticket
                 </a>

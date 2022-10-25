@@ -42,7 +42,7 @@
   position: relative;
 }
 
-.loginBox .userBox input {
+.loginBox .userBox .ub {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -108,7 +108,7 @@
 }
 .Button {
   margin-left: 5.8rem;
-  margin-top: 11rem;
+  margin-top: 13rem;
   cursor: pointer;
 }
 .ButtonY {
@@ -172,7 +172,7 @@
 .hr {
   width: 320px;
   margin-left: 6.6rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .textOr {
@@ -207,7 +207,7 @@
 
 .checkbox {
   height: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   justify-content: space-between;
   width: 18rem;
   display: flex;

@@ -23,8 +23,19 @@ const Home = () => {
               </h1>
               <p>and explore the world with us</p>
             </div>
-            <img src={require('../../assets/homeimage1.png')} alt="banner-1" />
+            <img className={styles.qq} src={require('../../assets/homeimage1.png')} alt="banner-1" />
           </div>
+
+          {/* <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal-dialog mt-5 me-4 ">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div className="modal-body">...</div>
+              </div>
+            </div>
+          </div> */}
 
           <div className={`${styles.card1} card bg-white`}>
             <div className={`${styles.card2} card-body`}>
@@ -71,30 +82,22 @@ const Home = () => {
               </div>
               <div className={styles.which}>
                 <h6>Which className do you want?</h6>
+                <div classsName={`${styles.ol} form-check`}>
+                  <input classsName="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                  <label classsName="form-check-label" for="flexRadioDefault1">
+                    Economy
+                  </label>
 
-                {/* <div className={styles.formG}>
-                  <div className={`${styles.aa} form-check`}>
-                    <input className={` ${styles.dd} form-check-input`} type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                    <span className={` ${styles.ff} form-check-label`} for="flexRadioDefault1">
-                      Default radio
-                    </span>
-                  </div>
+                  <input classsName="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                  <label classsName="form-check-label" for="flexRadioDefault1">
+                    Business
+                  </label>
 
-                  <div className={`${styles.aa} form-check`}>
-                    <input className={` ${styles.ee} form-check-input`} type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                    <h6 className={` ${styles.tt} form-check-label`} for="flexRadioDefault1">
-                      Default radio
-                    </h6>
-                  </div>
-
-                  <div className={`${styles.aa} form-check`}>
-                    <input className={` ${styles.hh} form-check-input`} type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                    <p className={` ${styles.kk} form-check-label`} for="flexRadioDefault1">
-                      radio
-                    </p>
-                  </div>
-                </div> */}
-
+                  <input classsName="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                  <label classsName="form-check-label" for="flexRadioDefault1">
+                    First Class
+                  </label>
+                </div>
                 <div className={styles.button}>
                   <button className={`${styles.btnSF} btn btn-primary `}>SEARCH FLIGHT</button>
                 </div>
@@ -103,7 +106,7 @@ const Home = () => {
           </div>
 
           <div className={styles.banner2}>
-            <img src={require('../../assets/homeimage2.png')} alt="banner-2" />
+            <img className={styles.qq} src={require('../../assets/homeimage2.png')} alt="banner-2" />
             <img className={styles.vektor6} src={require('../../assets/vector6.png')} alt="banner-1" />
           </div>
         </main>
@@ -118,29 +121,56 @@ const Home = () => {
           </div>
           <div className={styles.cardGrid}>
             <a className={styles.card} href="#">
-              <div className={styles.cardBackground}></div>
+              <div className={styles.cardBackground}>
+                <div className={styles.cardContent}>
+                  <p className={styles.cardCategory}>Bali</p>
+                  <h3 className={styles.cardHeading}>Indonesia</h3>
+                  <h5 className={styles.al}>10 Airlines</h5>
+                  <h4 className={styles.fk}>From $200</h4>
+                </div>
+              </div>
             </a>
             <a className={styles.card} href="#">
-              <div className={styles.cardBackground}></div>
+              <div className={styles.cardBackground}>
+                <div className={styles.cardContent}>
+                  <p className={styles.cardCategory}>Tokyo</p>
+                  <h3 className={styles.cardHeading}>Japan</h3>
+                  <h5 className={styles.al}>15 Airlines</h5>
+                  <h4 className={styles.fk}>From $100</h4>
+                </div>
+              </div>
             </a>
             <a className={styles.card} href="#">
-              <div className={styles.cardBackground}></div>
+              <div className={styles.cardBackground}>
+                <div className={styles.cardContent}>
+                  <p className={styles.cardCategory}>Sidney</p>
+                  <h3 className={styles.cardHeading}>Australia</h3>
+                  <h5 className={styles.al}>12 Airlines</h5>
+                  <h4 className={styles.fk}>From $300</h4>
+                </div>
+              </div>
             </a>
 
             <a className={styles.card} href="#">
-              <div className={styles.cardBackground}></div>
-              {/* <div className={styles.cardContent}>
-                <p className={styles.cardCategory}>Category</p>
-                <h3 className={styles.cardHeading}>Example Card Heading</h3>
-              </div> */}
+              <div className={styles.cardBackground}>
+                <div className={styles.cardContent}>
+                  <p className={styles.cardCategory}>Beijing</p>
+                  <h3 className={styles.cardHeading}>China</h3>
+                  <h5 className={styles.al}>34 Airlines</h5>
+                  <h4 className={styles.fk}>From $400</h4>
+                </div>
+              </div>
             </a>
 
             <a className={styles.card} href="#">
-              <div className={styles.cardBackground}></div>
-              {/* <div className={styles.cardContent}>
-                <p className={styles.cardCategory}>Category</p>
-                <h3 className={styles.cardHeading}>Example Card Heading</h3>
-              </div> */}
+              <div className={styles.cardBackground}>
+                <div className={styles.cardContent}>
+                  <p className={styles.cardCategory}>Jambi</p>
+                  <h3 className={styles.cardHeading}>Indonesia</h3>
+                  <h5 className={styles.al}>100 Airlines</h5>
+                  <h4 className={styles.fk}>From $1000</h4>
+                </div>
+              </div>
             </a>
 
             <div></div>

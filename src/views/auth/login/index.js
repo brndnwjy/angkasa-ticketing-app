@@ -17,13 +17,13 @@ const Login = () => {
           </div>
           <div className={styles.loginBox}>
             <form>
-              <div className={styles.userBox}>
-                <input type="text" name="" required="" />
-                <label>Username</label>
+              <div className={`${styles.userBox} ${styles.userBoxZ}`}>
+                <input className={styles.ub} type="text" name="" required="" />
+                <label className={styles.lm}>User Name</label>
               </div>
-              <div className={styles.userBox}>
-                <input type="password" name="" required="" />
-                <label>Password</label>
+              <div className={`${styles.userBox} ${styles.userBoxZ}`}>
+                <input className={styles.ub} type="password" name="" required="" />
+                <label className={styles.lm}>Password</label>
               </div>
             </form>
           </div>
