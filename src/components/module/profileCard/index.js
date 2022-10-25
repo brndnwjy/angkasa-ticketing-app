@@ -6,9 +6,17 @@ import iconstar from '../../../assets/myreview.svg'
 import iconsettings from '../../../assets/setting.svg'
 import iconlogout from '../../../assets/logout.svg'
 import { Link, useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const ProfileCard = () => {
   const navigate = useNavigate();
+
+  const { data: user } = useSelector((state) => state.user.user)
+  
+  const logout = () => {
+    localStorage.clear();
+    return navigate("/");
+  };
 
   return (
     <>
@@ -25,7 +33,8 @@ const ProfileCard = () => {
               </div>
               <div className='d-flex flex-column align-items-center my-3'> 
                 <h2>
-                  Mike Kowalski
+                  {/* Mike Kowalski  */}
+                  {user.username}
                 </h2> 
                 <p> 
                 Medan, Indonesia
@@ -49,24 +58,27 @@ const ProfileCard = () => {
                 </div>        
               </div>
               <div className={`d-flex flex-row mx-3 ${styles.setProfile}`}> 
-                  <img src={iconprofile} className={styles.iconprofile}/> 
+                  <img src={iconprofile} className={styles.iconprofile}/>
+                  <Link to={`/profile`} style={{ textDecoration:'none' }}>
                   <p className={`mx-5 ${styles.textProfile}`}> Profile </p>
+                  </Link>
               </div>
               <div className={`d-flex flex-row mx-3 ${styles.setMyreview}`}> 
                   <img src={iconstar} className={styles.iconstar}/> 
                   <p className={`mx-5 ${styles.textMyreview}`}> My Review </p>
               </div>
               <div className={`d-flex flex-row mx-3 ${styles.setSettings}`}> 
-              <Link to={`/profile`}>
+              
                  <img src={iconsettings} className={styles.iconsettings}/> 
+                 <Link to={`/updateProfile/user/${user.user_id}`} style={{ textDecoration:'none' }}>
                   <p className={`mx-5 ${styles.textSettings}`}> Settings </p>
-              </Link>
-                 
+                </Link>
               </div>
-              <div className={`d-flex flex-row mx-3 ${styles.setLogout}`}> 
+              
+              <button className={`d-flex flex-row mx-3  ${styles.setLogout}`} onClick={logout}> 
                   <img src={iconlogout} className={styles.iconlogout}/> 
                   <p className={`mx-5 ${styles.textLogout}`}> Logout </p>
-              </div>
+              </button>
             </div>
           </div>
         </div>

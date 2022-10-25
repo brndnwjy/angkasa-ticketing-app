@@ -14,8 +14,8 @@ const userReducer = (state = initialState, action) => {
             return { ...state, isLoading: false, isError: true }
         case "LOGIN_PENDING":
             return { ...state, isLoading: true }
-        case "RLOGIN_FULFILLED":
-            return { ...state, isLoading: false, user: action.payload.data.rows }
+        case "LOGIN_FULFILLED":
+            return { ...state, isLoading: false, user: action.payload }
         case "LOGIN_REJECTED":
             return { ...state, isLoading: false, isError: true }
         default:

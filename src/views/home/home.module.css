@@ -1,0 +1,402 @@
+.homePage {
+  width: 100%;
+  /* margin-bottom: 50px; */
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  margin-top: 50px;
+}
+
+.banner1 {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  z-index: -1;
+}
+
+.banner1 div {
+  margin-left: 130px;
+  margin-top: 100px;
+}
+
+.banner1 h1 {
+  font-size: 54px;
+  margin: 0;
+}
+
+.banner1 p {
+  margin: 0;
+  padding-left: 4px;
+}
+
+.banner1 h1 span {
+  color: #2395ff;
+}
+
+.banner2 {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.banner2 img {
+  height: 500px;
+  width: 420px;
+  align-self: flex-end;
+  z-index: -1;
+}
+
+.vektor6 {
+  height: 220.72px !important;
+  width: 220.72px !important;
+}
+
+.vector6 {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.card1 {
+  top: 70px;
+  height: 44rem !important;
+  margin-left: -4rem;
+  margin-right: -70rem;
+  border: none !important;
+}
+.card2 {
+  width: 25rem;
+  box-shadow: 0px 8px 27px 0px #0e3f6c30;
+  border-radius: 12px;
+  padding-left: 2rem !important;
+  padding-top: 2rem;
+}
+
+.card2 h5 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.card2 h6 {
+  font-weight: 500;
+}
+
+.card2 p {
+  color: #2395ff;
+  font-weight: 600;
+}
+
+.back {
+  margin-top: 1rem;
+  position: absolute;
+}
+
+.btnBack {
+  margin-left: 20rem;
+  margin-top: -5rem;
+  width: 10px;
+  height: 10px;
+}
+
+.getLine {
+  width: 335px;
+  height: 97px;
+  margin-top: 5rem;
+  box-shadow: 0px 8px 27px rgba(14, 63, 108, 0.19);
+  border-radius: 12px;
+}
+
+.getLine h4 {
+  color: #979797;
+  font-size: 12px;
+  margin-left: 1rem;
+  padding-top: 0.6rem;
+}
+
+.getLine h3 {
+  color: #979797;
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: -0.2rem;
+  margin-left: 1rem;
+}
+
+.getLine h2 {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 14px;
+  margin-left: 1rem;
+}
+
+.to,
+.tokyo,
+.japan {
+  padding-left: 15.5rem;
+  margin-top: -7rem;
+}
+
+.panah {
+  padding-left: 9.7rem;
+  margin-top: -6.5rem;
+}
+
+.buttonContainer button {
+  border: none;
+  margin-top: 2rem;
+  border-radius: 6px;
+}
+
+.submit1 {
+  width: 156.82px;
+  height: 44px;
+  background-color: #2395ff !important;
+  color: #ffffff;
+  z-index: 1;
+}
+.submit2 {
+  width: 156.82px;
+  height: 44px;
+  margin-left: 1.2rem !important;
+  background: #f0f0f0 !important;
+}
+
+.img1 {
+  background-color: pink;
+  z-index: -2;
+  margin-left: 3rem;
+  content: '';
+}
+
+.img2 {
+  width: 15px;
+  height: 15px;
+}
+
+.departure {
+  margin-top: 1.5rem;
+  color: #979797;
+}
+.dep {
+  width: 21rem;
+}
+
+.person {
+  margin-top: 1.5rem;
+  color: #979797;
+}
+.child {
+  width: 10rem !important;
+}
+.adult1 {
+  width: 10rem !important;
+  margin-left: 11rem;
+  margin-top: -2.4rem;
+}
+.which {
+  margin-top: 1.5rem;
+  color: #979797;
+}
+
+.btnSF {
+  color: white;
+  margin-top: 5px;
+
+  background-color: #2395ff !important;
+  box-shadow: 0px 8px 10px 0px #2395ff4d;
+  border-radius: 10px;
+  height: 3rem;
+  width: 21rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  border: none;
+}
+.trending {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 150px;
+  padding: 100px 100px 50px;
+}
+
+.trending > span {
+  color: #2395ff;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 10px 10px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px 45px;
+}
+
+.title > span {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.v {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2395ff;
+}
+
+.title > a {
+  text-decoration: none;
+  color: #2395ff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.heroSection {
+  align-items: flex-start;
+  background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  max-width: var(--width-container);
+  width: 100%;
+  margin-top: -20rem;
+}
+.card {
+  border-radius: 20px;
+}
+@media (min-width: 540px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .cardGrid {
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom: 20rem;
+  }
+}
+
+.card {
+  list-style: none;
+  position: relative;
+  border-radius: 20px;
+  margin-left: 7.5rem;
+}
+
+.card:before {
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.cardBackground {
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: filter 200ms linear, transform 200ms linear;
+  border-radius: 25px;
+
+  width: 206px;
+  height: 262px;
+}
+
+.card:hover .cardBackground {
+  transform: scale(1.05) translateZ(0);
+}
+
+.cardGrid:hover > .card:not(:hover) .cardBackground {
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.cardBackground {
+  background-image: url('../../assets/bali.jpg');
+}
+
+.top {
+  /* width: 100%; */
+  margin-top: 80px;
+  padding: 0px 130px;
+  margin-bottom: 220px;
+}
+
+.topContainer {
+  /* width: 100%; */
+  height: 550px;
+  background: #2395ff;
+  /* padding: 0px 130px !important; */
+  border-radius: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 65px 100px;
+  background-image: url('../../assets/bg-top10.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  /* margin-top: 30px; */
+}
+
+.topContainer h4 {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.topContainer h2 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #ffffff;
+  margin: 0;
+  margin-top: 7px;
+  margin-bottom: 50px;
+}
+
+.topContainer div {
+  width: 100%;
+}
+
+.topDestination {
+  /* background: #FFF; */
+  height: 300px;
+}
+
+.swiper-button-next::after {
+  background: blue !important;
+  /* color: red !important; */
+}
+
+.place {
+  width: 85% !important;
+  height: 85%;
+  background: blue;
+  border-radius: 50%;
+  overflow: hidden;
+  /* border: 2px solid rgba(255, 255, 255, 1); */
+}
+
+.place img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
