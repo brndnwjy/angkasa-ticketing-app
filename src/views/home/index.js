@@ -23,6 +23,7 @@ const Home = () => {
               </h1>
               <p>and explore the world with us</p>
             </div>
+<<<<<<< HEAD
             <img className={styles.qq} src={require('../../assets/homeimage1.png')} alt="banner-1" />
           </div>
 
@@ -37,6 +38,11 @@ const Home = () => {
             </div>
           </div> */}
 
+=======
+            <img src={require('../../assets/homeimage1.png')} alt="banner-1" />
+          </div>
+
+>>>>>>> integration
           <div className={`${styles.card1} card bg-white`}>
             <div className={`${styles.card2} card-body`}>
               <h6 className="card-title">Hey</h6>
@@ -82,6 +88,7 @@ const Home = () => {
               </div>
               <div className={styles.which}>
                 <h6>Which className do you want?</h6>
+<<<<<<< HEAD
                 <div classsName={`${styles.ol} form-check`}>
                   <input classsName="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   <label classsName="form-check-label" for="flexRadioDefault1">
@@ -98,6 +105,32 @@ const Home = () => {
                     First Class
                   </label>
                 </div>
+=======
+
+                {/* <div className={styles.formG}>
+                  <div className={`${styles.aa} form-check`}>
+                    <input className={` ${styles.dd} form-check-input`} type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                    <span className={` ${styles.ff} form-check-label`} for="flexRadioDefault1">
+                      Default radio
+                    </span>
+                  </div>
+
+                  <div className={`${styles.aa} form-check`}>
+                    <input className={` ${styles.ee} form-check-input`} type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                    <h6 className={` ${styles.tt} form-check-label`} for="flexRadioDefault1">
+                      Default radio
+                    </h6>
+                  </div>
+
+                  <div className={`${styles.aa} form-check`}>
+                    <input className={` ${styles.hh} form-check-input`} type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                    <p className={` ${styles.kk} form-check-label`} for="flexRadioDefault1">
+                      radio
+                    </p>
+                  </div>
+                </div> */}
+
+>>>>>>> integration
                 <div className={styles.button}>
                   <button className={`${styles.btnSF} btn btn-primary `}>SEARCH FLIGHT</button>
                 </div>
@@ -106,7 +139,11 @@ const Home = () => {
           </div>
 
           <div className={styles.banner2}>
+<<<<<<< HEAD
             <img className={styles.qq} src={require('../../assets/homeimage2.png')} alt="banner-2" />
+=======
+            <img src={require('../../assets/homeimage2.png')} alt="banner-2" />
+>>>>>>> integration
             <img className={styles.vektor6} src={require('../../assets/vector6.png')} alt="banner-1" />
           </div>
         </main>
@@ -121,6 +158,7 @@ const Home = () => {
           </div>
           <div className={styles.cardGrid}>
             <a className={styles.card} href="#">
+<<<<<<< HEAD
               <div className={styles.cardBackground}>
                 <div className={styles.cardContent}>
                   <p className={styles.cardCategory}>Bali</p>
@@ -171,6 +209,31 @@ const Home = () => {
                   <h4 className={styles.fk}>From $1000</h4>
                 </div>
               </div>
+=======
+              <div className={styles.cardBackground}></div>
+            </a>
+            <a className={styles.card} href="#">
+              <div className={styles.cardBackground}></div>
+            </a>
+            <a className={styles.card} href="#">
+              <div className={styles.cardBackground}></div>
+            </a>
+
+            <a className={styles.card} href="#">
+              <div className={styles.cardBackground}></div>
+              {/* <div className={styles.cardContent}>
+                <p className={styles.cardCategory}>Category</p>
+                <h3 className={styles.cardHeading}>Example Card Heading</h3>
+              </div> */}
+            </a>
+
+            <a className={styles.card} href="#">
+              <div className={styles.cardBackground}></div>
+              {/* <div className={styles.cardContent}>
+                <p className={styles.cardCategory}>Category</p>
+                <h3 className={styles.cardHeading}>Example Card Heading</h3>
+              </div> */}
+>>>>>>> integration
             </a>
 
             <div></div>

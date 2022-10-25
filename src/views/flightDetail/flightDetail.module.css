@@ -36,12 +36,6 @@
   font-size: 16px;
 }
 
-/* .logoC {
-  width: 200px;
-  height: 200px;
-  color: white;
-} */
-
 .c1 {
   height: 200vh;
 }
@@ -70,7 +64,6 @@
   border-bottom: 1px solid black;
 }
 
-/* LABEL ======================================= */
 .Ti {
   color: #9b96ab;
   font-size: 14px;
@@ -84,9 +77,6 @@
   -webkit-transition: 0.2s ease all;
 }
 
-/* active state */
-
-/* BOTTOM BARS ================================= */
 .bar {
   position: relative;
   display: block;
@@ -94,7 +84,7 @@
 }
 .bar:before,
 .bar:after {
-  content: '';
+  content: "";
   height: 2px;
   width: 0;
   bottom: 1px;
@@ -111,7 +101,6 @@
   right: 50%;
 }
 
-/* HIGHLIGHTER ================================== */
 .highlight {
   position: absolute;
   height: 60%;
@@ -122,13 +111,6 @@
   opacity: 0.5;
 }
 
-/* active state
-input:focus ~ .highlight {
-  -webkit-animation: inputHighlighter 0.3s ease;
-  -moz-animation: inputHighlighter 0.3s ease;
-  animation: inputHighlighter 0.3s ease;
-} */
-
 .alert {
   width: 650px;
   margin-top: 2.5rem !important;
@@ -137,40 +119,14 @@ input:focus ~ .highlight {
 .phone {
   width: 650px !important;
 }
+
 .grup1 {
   padding-top: 2rem;
 }
+
 .f {
   padding-top: 2rem;
 }
-/* ANIMATIONS ================
-@-webkit-keyframes inputHighlighter {
-  from {
-    background: #2395ff;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-@-moz-keyframes inputHighlighter {
-  from {
-    background: #2395ff;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-@keyframes inputHighlighter {
-  from {
-    background: #2395ff;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
-} */
 
 .pd {
   color: black;
@@ -179,6 +135,7 @@ input:focus ~ .highlight {
   margin-left: 4.5rem;
   margin-top: 3rem;
 }
+
 .containerFormPD {
   background-color: white;
   margin-top: 1.7rem;

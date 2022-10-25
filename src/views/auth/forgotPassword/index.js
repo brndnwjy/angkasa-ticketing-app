@@ -15,9 +15,15 @@ const ForgotPassword = () => {
           </div>
           <div className={styles.loginBox}>
             <form>
+<<<<<<< HEAD
               <div className={`${styles.userBox} ${styles.userBoxZ}`}>
                 <input className={styles.ub} type="text" name="" required="" />
                 <label className={styles.lm}>Email</label>
+=======
+              <div className={`${styles.userBox} ${styles.userBoxY}`}>
+                <input type="email" name="" required="" />
+                <label>Email</label>
+>>>>>>> integration
               </div>
             </form>
           </div>

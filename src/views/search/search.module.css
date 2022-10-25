@@ -31,13 +31,22 @@
     outline: none;
 }
 
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+.inputFormto::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:#FFFFFF;
 }
-::-ms-input-placeholder{ /* Microsoft Edge */
+.inputFormto::-ms-input-placeholder{ /* Microsoft Edge */
     color: #FFFFFF;
 }
-::placeholder{ /* Microsoft Edge */
+.inputFormto::placeholder{ /* Microsoft Edge */
+    color:#FFFFFF;
+}
+.inputToForm::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:#FFFFFF;
+}
+.inputToForm::-ms-input-placeholder{ /* Microsoft Edge */
+    color: #FFFFFF;
+}
+.inputToForm::placeholder{ /* Microsoft Edge */
     color:#FFFFFF;
 
 }

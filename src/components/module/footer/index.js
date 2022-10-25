@@ -7,6 +7,7 @@ import twitter from '../../../assets/twitter.svg';
 import youtube from '../../../assets/youtube.svg';
 import facebook from '../../../assets/facebook.svg';
 import instagram from '../../../assets/instagram.svg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -15,7 +16,7 @@ const Footer = () => {
         <div className="row ">
           <div className="col-4 mt-5">
             <div className={`${styles.container1} container-fluid`}>
-              <img className={styles.logo1} src={logo} />
+              <img className={styles.logo1} src={logo} alt="logo"/>
               <h2 className={styles.ankasa1}>Ankasa</h2>
               <div className={styles.text1}>
                 <p>
@@ -30,16 +31,16 @@ const Footer = () => {
               <div className={styles.containerImg}>
                 <ul className={styles.list}>
                   <li className={styles.listLi}>
-                    <a>Find Ticket</a>
+                    <Link to="">Find Ticket</Link>
                   </li>
                   <li className={styles.listLi}>
-                    <a className={styles.textA}>My Booking</a>
+                    <Link to="" className={styles.textA}>My Booking</Link>
                   </li>
                   <li className={styles.listLi}>
-                    <a className={styles.textB}>Chat</a>
+                    <Link to="" className={styles.textB}>Chat</Link>
                   </li>
                   <li className={styles.listLi}>
-                    <a className={styles.textC}>Notification</a>
+                    <Link to="" className={styles.textC}>Notification</Link>
                   </li>
                 </ul>
               </div>
@@ -49,18 +50,18 @@ const Footer = () => {
             <div className={styles.container3}>
               <h4 className={styles.fo}>Download Angkasa app</h4>
               <div className={styles.containerImg}>
-                <img className={styles.img1} src={appstore} />
-                <img className={styles.img2} src={googlestore} />
+                <img className={styles.img1} src={appstore} alt="appstore icon"/>
+                <img className={styles.img2} src={googlestore} alt="googleplay icon"/>
               </div>
             </div>
           </div>
           <div className="col-3 mt-5">
             <div className={styles.container4}>
               <h4 className={styles.fo}>Follow Us</h4>
-              <img className={styles.imgOne} src={facebook} />
-              <img className={styles.imgTwo} src={youtube} />
-              <img className={styles.imgTwo} src={twitter} />
-              <img className={styles.imgTwo} src={instagram} />
+              <img className={styles.imgOne} src={facebook} alt="facebook icon"/>
+              <img className={styles.imgTwo} src={youtube} alt="youtube icon"/>
+              <img className={styles.imgTwo} src={twitter} alt="twitter icon"/>
+              <img className={styles.imgTwo} src={instagram} alt="instagram icon"/>
             </div>
           </div>
         </div>

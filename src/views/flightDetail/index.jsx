@@ -7,7 +7,8 @@ import img2 from '../../assets/vps.png';
 import ceklis from '../../assets/centang.png';
 import bnr from '../../assets/rp.png';
 
-import v from '../../assets/btnback.png';
+// import v from '../../assets/btnback.png';
+import { Link } from 'react-router-dom';
 
 const FlightDetail = () => {
   return (
@@ -16,7 +17,7 @@ const FlightDetail = () => {
       <section>
         <div className="row">
           <div className={`${styles.benner} col-12`}>
-            <img className={styles.bnr} src={bnr} />
+            <img className={styles.bnr} src={bnr} alt=""/>
             <h2 className={styles.textPerson}>Contact Person Details</h2>
             <h3 className={styles.fd}>Flight Detail</h3>
             <h4 className={styles.vd}>View Detail</h4>
@@ -39,9 +40,9 @@ const FlightDetail = () => {
                   </button>
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" href="/">
                         Action
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                   <input type="text" className={`${styles.nn} form-control`} aria-label="Text input with dropdown button" />
@@ -67,9 +68,9 @@ const FlightDetail = () => {
                   </button>
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" href="/">
                         Action
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                   <input type="text" className={`${styles.nn} form-control`} aria-label="Text input with dropdown button" />
@@ -86,9 +87,9 @@ const FlightDetail = () => {
                   </button>
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to="#">
                         Action
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                   <input type="text" className={`${styles.nn} form-control`} aria-label="Text input with dropdown button" />
