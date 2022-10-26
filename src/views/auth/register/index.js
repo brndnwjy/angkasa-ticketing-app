@@ -13,7 +13,6 @@ const Register = () => {
   const [registerForm, setRegisterForm] = useState({
     username: "",
     email: "",
-    phone: "",
     password: "",
   });
   const handleInput = (e) => {

@@ -28,8 +28,16 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (form.email === "" || form.password === "") {
+      alert("Data tidak boleh kosong");
+    } else {
+      const form = {
+        email: form.email,
+        password: form.password,
+      };
     dispacth(login(form, navigate))
   }
+}
   return (
     <>
       <section className='login'>
@@ -74,7 +82,6 @@ const Login = () => {
                   <hr />
                   <p className={styles.orSign}> or sign in with</p>
                   <div className={`d-flex flex-row justify-content-center ${styles.setIcon}`}>
-
                     <img src={googleW} className={`me-3 ${styles.googleIcon}`} alt="google icon" />
                     <img className={styles.fbIcon} src={facebookW} alt="facebook icon" />
                   </div>
@@ -84,8 +91,6 @@ const Login = () => {
           </div>
         </div>
       </section>
-
-
     </>
   );
 };

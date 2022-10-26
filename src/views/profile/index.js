@@ -39,9 +39,9 @@ const Profile = () => {
                         Contact
                       </p>
                       <label for="email" className={`mt-3 ms-3 ${styles.labelForm}`}>Email address</label>
-                      <input type="email" className={styles.inputProfile} id="email" placeholder={user.email} />
+                      <input type="email" className={styles.inputProfile} id="email" defaultValue={user.email} disabled />
                       <label for="phone" className={`mt-3 ms-3 ${styles.labelForm}`}>Phone Number</label>
-                      <input type="text" className={styles.inputProfile} id="phone" placeholder={user.phone} />
+                      <input type="text" className={styles.inputProfile} id="phone" defaultValue={user.phone} disabled />
                       <div className='d-flex flex-row'>
                         <p className='col-md-5'></p>
                         <p className={`mt-3  ${styles.accountSettings}`}> Account Settings </p>
@@ -55,13 +55,13 @@ const Profile = () => {
                         Biodata
                       </p>
                       <label for="username" className={`mt-3 ms-3 ${styles.labelForm}`}>Username</label>
-                      <input type="text" className={styles.inputProfile} id="username" placeholder={user.username} />
+                      <input type="text" className={styles.inputProfile} id="username" defaultValue={user.username} disabled />
                       <label for="city" className={`mt-3 ms-3 ${styles.labelForm}`}> City </label>
-                      <input type="text" className={styles.inputProfile} id="city" placeholder={user.city} />
+                      <input type="text" className={styles.inputProfile} id="city" defaultValue={user.city} disabled />
                       <label for="address" className={`mt-3 ms-3 ${styles.labelForm}`}> Address </label>
-                      <input type="text" className={styles.inputProfile} id="address" placeholder={user.address} />
+                      <input type="text" className={styles.inputProfile} id="address" defaultValue={user.address} disabled />
                       <label for="Postcode" className={`mt-3 ms-3 ${styles.labelForm}`}>Post Code</label>
-                      <input type="text" className={styles.inputProfile} id="Postcode" placeholder={user.postcode} />
+                      <input type="text" className={styles.inputProfile} id="Postcode" defaultValue={user.postcode} disabled />
                     </div>
                   </div>
                 </div>

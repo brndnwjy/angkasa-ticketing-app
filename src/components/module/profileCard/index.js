@@ -28,7 +28,7 @@ const ProfileCard = () => {
               <div className={`d-flex flex-row justify-content-center my-3 px-5 ${styles.picProfile}`}>
                 <img src={avatar}/>
               </div>
-              <div className='d-flex flex-row justify-content-center my-4 '> 
+              <div className='d-flex flex-row justify-content-center my-4'> 
                 <button type="button" class="btn btn-outline-primary">Select Photo</button>
               </div>
               <div className='d-flex flex-column align-items-center my-3'> 
@@ -37,7 +37,8 @@ const ProfileCard = () => {
                   {user.username}
                 </h2> 
                 <p> 
-                Medan, Indonesia
+                  {user.address}
+                {/* Medan, Indonesia */}
                 </p>
               </div>
               <div > 
@@ -68,13 +69,11 @@ const ProfileCard = () => {
                   <p className={`mx-5 ${styles.textMyreview}`}> My Review </p>
               </div>
               <div className={`d-flex flex-row mx-3 ${styles.setSettings}`}> 
-              
                  <img src={iconsettings} className={styles.iconsettings}/> 
                  <Link to={`/updateProfile/user/${user.user_id}`} style={{ textDecoration:'none' }}>
                   <p className={`mx-5 ${styles.textSettings}`}> Settings </p>
                 </Link>
-              </div>
-              
+              </div>            
               <button className={`d-flex flex-row mx-3  ${styles.setLogout}`} onClick={logout}> 
                   <img src={iconlogout} className={styles.iconlogout}/> 
                   <p className={`mx-5 ${styles.textLogout}`}> Logout </p>

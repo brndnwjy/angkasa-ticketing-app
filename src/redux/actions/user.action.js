@@ -13,22 +13,21 @@ export const register = (body) => {
         })
     }
 
-export const login = (form, navigate) => async(dispatch) => {
-    try{
-        dispatch({type:"LOGIN_PENDING"})
-        const result = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/login`, form)
-        // console.log(result)
-        const user = result.data.token
-        localStorage.setItem('token', user.token)
-        localStorage.setItem('user', user.data)
-        dispatch({type:"LOGIN_FULFILLED", payload:user})
-        navigate('/mybooking')
-    }catch(error){
-        console.log(error)
-        dispatch({type:"LOGIN_REJECTED"})
+    export const login = (form, navigate) => async(dispatch) => {
+        try{
+            dispatch({type:"LOGIN_PENDING"})
+            const result = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/login`, form)
+            // console.log(result)
+            const user = result.data.token
+            localStorage.setItem('token', user.token)
+            localStorage.setItem('user', user.data)
+            dispatch({type:"LOGIN_FULFILLED", payload:user})
+            navigate('/mybooking')
+        }catch(error){
+            console.log(error)
+            dispatch({type:"LOGIN_REJECTED"})
+        }   
     }
-    
-}
 
 export const detailProfile = (user_id) => {
     return {
