@@ -11,7 +11,7 @@ import { detailProfile } from '../../redux/actions/user.action';
 
 const Profile = () => {
   // const dataProfile = JSON.parse(localStorage.getItem('data'));
-  const { data: user } = useSelector((state) => state.user.user)
+  // const { data: user } = useSelector((state) => state.user.user)
   // console.log(user)
 
   return (
@@ -32,7 +32,8 @@ const Profile = () => {
                   P R O F I L E
                 </p>
                 <p className={styles.subtitle}>
-                  Profile:{user.user_id}
+                  {/* Profile:{user.user_id} */}
+                  Profile
                 </p>
                 <div className='d-flex flex-column flex-md-row my-4 detailProfile'>
                   <div className='col-md-6 me-4'>
@@ -42,9 +43,9 @@ const Profile = () => {
                         Contact
                       </p>
                       <label for="email" className={`mt-3 ms-3 ${styles.labelForm}`}>Email address</label>
-                      <input type="email" className={styles.inputProfile} id="email" placeholder={user.email} />
+                      <input type="email" className={styles.inputProfile} id="email" placeholder="{user.email}" />
                       <label for="phone" className={`mt-3 ms-3 ${styles.labelForm}`}>Phone Number</label>
-                      <input type="text" className={styles.inputProfile} id="phone" placeholder={user.phone} />
+                      <input type="text" className={styles.inputProfile} id="phone" placeholder="{user.phone}" />
 
                       <div className='d-flex flex-row'>
                         <p className='col-md-5'></p>
@@ -59,13 +60,13 @@ const Profile = () => {
                         Biodata
                       </p>
                       <label for="username" className={`mt-3 ms-3 ${styles.labelForm}`}>Username</label>
-                      <input type="text" className={styles.inputProfile} id="username" placeholder={user.username} />
+                      <input type="text" className={styles.inputProfile} id="username" placeholder="{user.username}" />
                       <label for="city" className={`mt-3 ms-3 ${styles.labelForm}`}> City </label>
-                      <input type="text" className={styles.inputProfile} id="city" placeholder={user.city} />
+                      <input type="text" className={styles.inputProfile} id="city" placeholder="{user.city}" />
                       <label for="address" className={`mt-3 ms-3 ${styles.labelForm}`}> Address </label>
-                      <input type="text" className={styles.inputProfile} id="address" placeholder={user.address} />
+                      <input type="text" className={styles.inputProfile} id="address" placeholder="{user.address}" />
                       <label for="Postcode" className={`mt-3 ms-3 ${styles.labelForm}`}>Post Code</label>
-                      <input type="text" className={styles.inputProfile} id="Postcode" placeholder={user.postcode} />
+                      <input type="text" className={styles.inputProfile} id="Postcode" placeholder="{user.postcode}" />
                     </div>
                     <div className=' d-grid gap-2 d-md-flex justify-content-md-end me-5'>
                       <button type="button" class="btn btn-primary mt-3 ">Save</button>

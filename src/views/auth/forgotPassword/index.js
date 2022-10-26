@@ -8,22 +8,16 @@ const ForgotPassword = () => {
       <div className="row">
         <div className={`${styles.column1} col-7`}></div>
         <div className={`${styles.column2} col-5`}>
-          <img className={styles.logo1} src={logo} />
+          <img className={styles.logo1} src={logo} alt="logo"/>
           <h4 className={styles.textLogo1}>Ankasa</h4>
           <div className={styles.textLogo2}>
             <h3 className={styles.login}>Forgot Password</h3>
           </div>
           <div className={styles.loginBox}>
             <form>
-<<<<<<< HEAD
               <div className={`${styles.userBox} ${styles.userBoxZ}`}>
-                <input className={styles.ub} type="text" name="" required="" />
+                <input className={styles.ub} type="email" name="" required="" />
                 <label className={styles.lm}>Email</label>
-=======
-              <div className={`${styles.userBox} ${styles.userBoxY}`}>
-                <input type="email" name="" required="" />
-                <label>Email</label>
->>>>>>> integration
               </div>
             </form>
           </div>

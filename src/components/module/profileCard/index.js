@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux'
 const ProfileCard = () => {
   const navigate = useNavigate();
 
-  const { data: user } = useSelector((state) => state.user.user)
+  // const { data: user } = useSelector((state) => state.user.user)
   
   const logout = () => {
     localStorage.clear();
@@ -33,8 +33,8 @@ const ProfileCard = () => {
               </div>
               <div className='d-flex flex-column align-items-center my-3'> 
                 <h2>
-                  {/* Mike Kowalski  */}
-                  {user.username}
+                  Mike Kowalski 
+                  {/* {user.username} */}
                 </h2> 
                 <p> 
                 Medan, Indonesia
@@ -70,9 +70,9 @@ const ProfileCard = () => {
               <div className={`d-flex flex-row mx-3 ${styles.setSettings}`}> 
               
                  <img src={iconsettings} className={styles.iconsettings}/> 
-                 <Link to={`/updateProfile/user/${user.user_id}`} style={{ textDecoration:'none' }}>
+                 {/* <Link to={`/updateProfile/user/${user.user_id}`} style={{ textDecoration:'none' }}> */}
                   <p className={`mx-5 ${styles.textSettings}`}> Settings </p>
-                </Link>
+                {/* </Link> */}
               </div>
               
               <button className={`d-flex flex-row mx-3  ${styles.setLogout}`} onClick={logout}> 

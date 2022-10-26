@@ -8,9 +8,10 @@ body {
   margin: 0;
   padding: 0;
 } */
+
 .navi{
-  position: absolute;
-  bottom: 0;
+  position: sticky;
+  top: 0;
 }
 
 .containerNav {

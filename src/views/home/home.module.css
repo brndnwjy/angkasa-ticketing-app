@@ -73,6 +73,7 @@
   border-radius: 12px;
   padding-left: 2rem !important;
   padding-top: 2rem;
+  margin-left: 2rem;
 }
 
 .card2 h5 {
@@ -176,7 +177,6 @@
   height: 15px;
 }
 
-<<<<<<< HEAD
 .cardCategory {
   margin-left: 1rem;
   margin-top: 1rem;
@@ -210,8 +210,6 @@
   color: white;
 }
 
-=======
->>>>>>> integration
 .departure {
   margin-top: 1.5rem;
   color: #979797;
@@ -365,11 +363,7 @@
 }
 
 .cardBackground {
-<<<<<<< HEAD
   background-image: url('../../assets//paris.jpg');
-=======
-  background-image: url('../../assets/bali.jpg');
->>>>>>> integration
 }
 
 .top {
@@ -440,7 +434,6 @@
   height: 100%;
   object-fit: cover;
 }
-<<<<<<< HEAD
 
 @media only screen and (max-width: 720px) {
   .qq {
@@ -457,5 +450,3 @@
     height: 184.05px;
   }
 }
-=======
->>>>>>> integration
