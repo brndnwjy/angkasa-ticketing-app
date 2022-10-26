@@ -5,15 +5,12 @@ import Navbar from '../../components/module/navbar';
 import Footer from '../../components/module/footer';
 import Arrowright from '../../assets/btnbackright.svg'
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
-import { useDispatch, useSelector } from 'react-redux';
-import { detailProfile } from '../../redux/actions/user.action';
+import {  useSelector } from 'react-redux';
 
 const Profile = () => {
   // const dataProfile = JSON.parse(localStorage.getItem('data'));
   const { data: user } = useSelector((state) => state.user.user)
   // console.log(user)
-
   return (
     <>
       <Navbar />
@@ -32,11 +29,11 @@ const Profile = () => {
                   P R O F I L E
                 </p>
                 <p className={styles.subtitle}>
-                  Profile:{user.user_id}
+                  Profile
+                  {/* :{user.user_id} */}
                 </p>
                 <div className='d-flex flex-column flex-md-row my-4 detailProfile'>
                   <div className='col-md-6 me-4'>
-
                     <div className='d-flex flex-column detailProfileleft'>
                       <p className={styles.contact}>
                         Contact
@@ -45,7 +42,6 @@ const Profile = () => {
                       <input type="email" className={styles.inputProfile} id="email" placeholder={user.email} />
                       <label for="phone" className={`mt-3 ms-3 ${styles.labelForm}`}>Phone Number</label>
                       <input type="text" className={styles.inputProfile} id="phone" placeholder={user.phone} />
-
                       <div className='d-flex flex-row'>
                         <p className='col-md-5'></p>
                         <p className={`mt-3  ${styles.accountSettings}`}> Account Settings </p>
@@ -67,10 +63,6 @@ const Profile = () => {
                       <label for="Postcode" className={`mt-3 ms-3 ${styles.labelForm}`}>Post Code</label>
                       <input type="text" className={styles.inputProfile} id="Postcode" placeholder={user.postcode} />
                     </div>
-                    <div className=' d-grid gap-2 d-md-flex justify-content-md-end me-5'>
-                      <button type="button" class="btn btn-primary mt-3 ">Save</button>
-                    </div>
-
                   </div>
                 </div>
               </div>

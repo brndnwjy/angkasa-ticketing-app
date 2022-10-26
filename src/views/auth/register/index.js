@@ -1,8 +1,37 @@
-import React from 'react';
+import React, {useState } from 'react';
 import styles from '../auth.module.css';
 import logo from '../../../assets/logo.svg';
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+
 
 const Register = () => {
+  const navigate = useNavigate();
+
+  const [registerForm, setRegisterForm] = useState({
+    username: "",
+    email: "",
+    phone: "",
+    password: "",
+  });
+  const handleInput = (e) => {
+    setRegisterForm({
+      ...registerForm,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:4000/v1/user/register", registerForm)
+      .then((res) => {
+        console.log(res);
+        navigate("/login");
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
     <>
       <div className="row">
@@ -14,17 +43,17 @@ const Register = () => {
             <h3 className={`${styles.login} ${styles.register1}`}>Register</h3>
           </div>
           <div className={styles.loginBox}>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className={`${styles.userBox} ${styles.userBoxZ}`}>
-                <input type="text" name="" required="" />
+                <input type="text" name="username" required="" onChange={handleInput} />
                 <label>Full Name</label>
               </div>
               <div className={styles.userBox}>
-                <input type="email" name="" required="" />
+                <input type="email" name="email" required="" onChange={handleInput}/>
                 <label>Email</label>
               </div>
               <div className={styles.userBox}>
-                <input type="password" name="" required="" />
+                <input type="password" name="password" required="" onChange={handleInput} />
                 <label>Password</label>
               </div>
             </form>

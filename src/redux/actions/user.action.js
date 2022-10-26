@@ -41,22 +41,33 @@ export const detailProfile = (user_id) => {
     }
 }
 
-// export const updateProfile = (user.user_id, update) => {
-//     return new Promise((resolve, reject) => {
-//         axios.put(`${process.env.REACT_APP_BACKEND_URL}/user/update/${user.user_id}`, update, {
-//             // headers: {
-//             //   "Content-Type": "multipart/form-data",
-//             // },
-//           })
-//           .then((res) => {
-//             console.log(res);
-//             // setImage("");
-//             alert("Update Success");
-//             return navigate("/profile");
-//           })
-//           .catch((err) => {
-//             console.log(err);
-//             alert("Update Failed");
-//           })
-//     })
-// }
+export const updateProfile = (user, update, handleSuccess) => ({
+    type : "UPDATE_PROFILE",
+    payload : new Promise((resolve, reject) => {
+        axios
+        .put(`${process.env.REACT_APP_BACKEND_URL}/user/update/${user}`, update)
+        .then((response) => {
+            console.log(response.data)
+            handleSuccess(response.data)
+            resolve(response);
+        })
+        .catch((err) => {
+            reject(err)
+        })
+    })
+})
+
+export const deleteProfile = (user_id) => ({
+    type: "DELETE_PROFILE",
+    payload : new Promise((resolve, reject) => {
+       axios
+        .delete(`${process.env.REACT_APP_BACKEND_URL}/delete/${user_id}`)
+        .then((response) => {
+            console.log(response.data)
+            resolve(response);
+        })
+        .catch((err) => {
+            reject(err)
+        }) 
+    })
+})
