@@ -112,7 +112,7 @@
 }
 
 .alert {
-  width: 650px;
+  /* width: 650px; */
   margin-top: 2.5rem !important;
 }
 
@@ -153,28 +153,36 @@
 }
 
 .contentForm {
-  width: 650px;
+  /* width: 650px; */
   padding-top: 2rem !important;
 }
 
-.alert1 {
+/* .alert1 {
   width: 650px;
   margin-left: 1.7rem;
-}
+} */
 .bnr {
   margin-left: -70rem;
 
   height: 12rem;
   color: white;
 }
+.bnr {
+  margin-left: -70rem;
+}
 
 .formR {
-  width: 650px;
-  margin-left: 1.7rem;
-  margin-top: 2.5rem;
-  width: 650px !important;
+  /* width: 650px; */
+  /* margin-left: 1.7rem; */
+  /* margin-top: 2.5rem; */
+  /* width: 100%; */
+  
+  background-color: white;
 }
 .nn {
+  /* padding: 20px; */
+  border-radius: 0px !important;
+  margin-top: 20px;
   border-top: none !important;
   border-left: none !important;
   border-right: none !important;
@@ -218,7 +226,7 @@
   font-weight: 600;
 }
 .sa {
-  margin-left: 16rem;
+  margin-left: 11rem;
 }
 
 .garuda {
