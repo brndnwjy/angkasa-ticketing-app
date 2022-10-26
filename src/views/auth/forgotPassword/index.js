@@ -1,37 +1,55 @@
 import React from 'react';
 import styles from '../auth.module.css';
 import logo from '../../../assets/logo.svg';
+import banner from '../../../assets/banner.png'
+
 
 const ForgotPassword = () => {
   return (
     <>
-      <div className="row">
-        <div className={`${styles.column1} col-7`}></div>
-        <div className={`${styles.column2} col-5`}>
-          <img className={styles.logo1} src={logo} />
-          <h4 className={styles.textLogo1}>Ankasa</h4>
-          <div className={styles.textLogo2}>
-            <h3 className={styles.login}>Forgot Password</h3>
+    <section className='login'>
+      <div className="container-fluid g-0">
+        <div className="row">
+          <div className="col-md-7">
+            <div className={`d-flex flex-row ${styles.leftside}`}>
+              <img src={banner} alt="" />
+            </div>
           </div>
-          <div className={styles.loginBox}>
-            <form>
-              <div className={`${styles.userBox} ${styles.userBoxY}`}>
-                <input type="email" name="" required="" />
-                <label>Email</label>
+          <div className="col-md-5 ">
+            <div className="rightside p-5">
+              <div className="d-flex flex-row">
+                <img src={logo} alt="" className='me-5' />
+                <p className={styles.titleLogo}>
+                  Angkasa
+                </p>
               </div>
-            </form>
-          </div>
-          <form className={`${styles.ButtonY} d-flex `} role="search">
-            <button className={`${styles.signUp} ${styles.signUp2}`} type="submit">
-              Send
-            </button>
-          </form>
-          <div className={styles.forgotY}>
-            <p className={`${styles.forgotP} ${styles.forgotP1}`}>You’ll get message soon on your email</p>
+              <div className="d-flex flex-row my-5">
+                <p className={styles.title}>
+                  Forgot Password
+                </p>
+              </div>
+              <div className="d-flex flex-column col-md-10">
+                <div class="form-floating mb-3">
+                  <input type="email"className={`form-control  ${styles.formInput}`} id="floatingPassword" placeholder="name@example.com" />
+                  <label for="floatingInput">Email address</label>
+                </div>
+                
+                <div class="d-grid gap-2 col-12 mx-auto my-4 ">
+                  <button class={styles.btnlogin} type="button">Send</button>
+                </div>
+                <div className='d-flex flex-column align-items-center justify-content-center mb-5'>
+                  <p className={styles.forgot}> You’ll get message soon on your email </p>
+                </div>
+                
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </section>
+
+
+  </>
   );
 };
 

@@ -5,8 +5,10 @@ import Footer from '../../components/module/footer';
 import garuda from '../../assets/airline.png';
 import img2 from '../../assets/vps.png';
 import ceklis from '../../assets/centang.png';
+import bnr from '../../assets/pesawat.svg';
 
-import v from '../../assets/btnback.png';
+// import v from '../../assets/btnback.png';
+import { Link } from 'react-router-dom';
 
 const FlightDetail = () => {
   return (
@@ -15,41 +17,28 @@ const FlightDetail = () => {
       <section>
         <div className="row">
           <div className={`${styles.benner} col-12`}>
+            <img className={styles.bnr} src={bnr} alt="" />
             <h2 className={styles.textPerson}>Contact Person Details</h2>
             <h3 className={styles.fd}>Flight Detail</h3>
             <h4 className={styles.vd}>View Detail</h4>
           </div>
           <div className={`${styles.c1} col-7 bg-light`}>
             <div className={styles.cForm}>
-              <form className={styles.form}>
-                <div className={`${styles.group} ${styles.grup1}`}>
-                  <input type="text" required />
-                  <span className={styles.highlight}></span>
-                  <span className={styles.bar}></span>
-                  <label className={styles.f}>Full Name</label>
+              <form className='pt-2'>
+                <div className={`${styles.formR} form-floating mx-5`}>
+                  <input type="email" className={`${styles.nn} form-control mt-5`} id="floatingInput" placeholder="name@example.com" />
+                  <label for="floatingInput">Full Name</label>
+                </div>
+                <div className={`${styles.formR} form-floating mx-5`}>
+                  <input type="email" className={`${styles.nn} form-control`} id="floatingInput" placeholder="name@example.com" />
+                  <label for="floatingInput">Email</label>
+                </div>
+                <div className={`${styles.formR} form-floating mx-5`}>
+                  <input type="tel" className={`${styles.nn} form-control`} id="floatingInput" placeholder="name@example.com" />
+                  <label for="floatingInput">Phone</label>
                 </div>
 
-                <div className={styles.group}>
-                  <input type="text" required />
-                  <span className={styles.highlight}></span>
-                  <span className={styles.bar}></span>
-                  <label>Email</label>
-                </div>
-
-                <div className={`${styles.group}  ${styles.phone} input-group mb-3`}>
-                  <button className={`${styles.buttonW} btn btn-outline-secondary dropdown-toggle`} type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    +62
-                  </button>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Action
-                      </a>
-                    </li>
-                  </ul>
-                  <input type="text" className={`${styles.Fi} form-control`} aria-label="Text input with dropdown button" />
-                </div>
-                <div className={`${styles.group} ${styles.alert} alert alert-danger`} role="alert">
+                <div className={`${styles.group} ${styles.alert} alert alert-danger mx-5`} role="alert">
                   Make sure the customer data is correct.
                 </div>
               </form>
@@ -59,53 +48,24 @@ const FlightDetail = () => {
               <h2 className={styles.pd}>Passenger Details</h2>
               <div className={styles.containerFormPD}>
                 <div className={styles.contentForm}>
-                  <div className={`${styles.alert1} alert alert-success `} role="alert">
-                    <span>Passenger : 1 Adult</span>
-                    <span className={styles.sa}>Same as contact person</span>
+                  <div className={`${styles.alert1} alert alert-success mx-5 d-flex flex-row `} role="alert">
+                    <p className='col-md-7'>Passenger : 1 Adult</p>
+                    <p className='text-end'>Same as contact person</p>
                   </div>
                 </div>
-                <div className={`${styles.group}  ${styles.phone} input-group mb-3`}>
-                  <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Mr.
-                  </button>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Mr.
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Mrs.
-                      </a>
-                    </li>
-                  </ul>
-                  <input type="text" className="form-control" aria-label="Text input with dropdown button" />
+                <div className={`${styles.formR} form-floating mx-5`}>
+                  <input type="email" className={`${styles.nn} form-control`} id="floatingInput" placeholder="name@example.com" />
+                  <label for="floatingInput">Email</label>
                 </div>
 
-                <div className={styles.group}>
-                  <input type="text" required />
-                  <span className={styles.highlight}></span>
-                  <span className={styles.bar}></span>
-                  <label>Full Name</label>
+                <div className={`${styles.formR} form-floating mx-5`}>
+                  <input type="email" className={`${styles.nn} form-control`} id="floatingInput" placeholder="name@example.com" />
+                  <label for="floatingInput">Full Name</label>
                 </div>
 
-                <div className={`${styles.group}  ${styles.phone} input-group mb-3`}>
-                  <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Indonesia
-                  </button>
-
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Mr.
-                      </a>
-                    </li>
-                  </ul>
-
-                  <input type="text" className="form-control" aria-label="Text input with dropdown button" />
-
-                  <label className={styles.national}>Nationality</label>
+                <div className={`${styles.formR} form-floating mx-5`}>
+                  <input type="email" className={`${styles.nn} form-control`} id="floatingInput" placeholder="name@example.com" />
+                  <label for="floatingInput">Nationality</label>
                 </div>
               </div>
             </div>
@@ -115,9 +75,7 @@ const FlightDetail = () => {
                 <div className={styles.contentForm}>
                   <div className={`${styles.fc} form-check`}>
                     <input className={`${styles.Ib} form-check-input mt-1`} type="checkbox" value="" id="flexCheckDefault" />
-                    <label className={`${styles.Ti} form-check-label text-dark`} for="flexCheckDefault">
-                      <span>Travel Insurance</span>
-                    </label>
+                    <label className={`${styles.Ti} form-check-label text-dark`} for="flexCheckDefault"></label>
                     <span className={styles.Tn}>Travel Insurance</span>
                     <p className={styles.dollar}>
                       <span className={styles.d1}>$ 2,00</span>/pax

@@ -20,9 +20,9 @@ const Navbar = () => {
             <form className={`${styles.input} d-flex `} role="search">
               <input className={`${styles.search} form-control `} type="search" placeholder="Where you want to go?" aria-label="Search" />
             </form>
-            <ul className="navbar-nav me-auto ms-5 mb-2 mb-lg-0">
-              <li className={`${styles.menuText} nav-item`}>
-                <a className=" nav-link active" aria-current="page" href="#">
+            <ul className="navbar-nav me-auto ms-5 mb-2 mb-lg-0 ">
+              <li className={`${styles.menuText} nav-item  `}>
+                <a className=" nav-link active" data-bs-toggle="modal" data-bs-target="#exampleModal" aria-current="page" href="#">
                   Find Ticket
                 </a>
               </li>

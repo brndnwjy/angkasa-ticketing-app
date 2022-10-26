@@ -2,8 +2,7 @@
 import axios from "axios";
 
 export const register = (body) => {
-        return new Promise((resolve, reject) => {
-            
+        return new Promise((resolve, reject) => {           
             axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/register`, body)
             .then((response) => {
                 resolve(response)
@@ -41,11 +40,11 @@ export const detailProfile = (user_id) => {
     }
 }
 
-export const updateProfile = (user, update, handleSuccess) => ({
+export const updateProfile = (user_id, update, handleSuccess) => ({
     type : "UPDATE_PROFILE",
     payload : new Promise((resolve, reject) => {
         axios
-        .put(`${process.env.REACT_APP_BACKEND_URL}/user/update/${user}`, update)
+        .put(`${process.env.REACT_APP_BACKEND_URL}/user/update/${user_id}`, update)
         .then((response) => {
             console.log(response.data)
             handleSuccess(response.data)

@@ -1,6 +1,8 @@
 import React, {useState } from 'react';
 import styles from '../auth.module.css';
 import logo from '../../../assets/logo.svg';
+import banner from '../../../assets/banner.png'
+
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 
@@ -34,52 +36,61 @@ const Register = () => {
 
   return (
     <>
-      <div className="row">
-        <div className={`${styles.column1} col-7`}></div>
-        <div className={`${styles.column2} col-5`}>
-          <img className={styles.logo1} src={logo} />
-          <h4 className={styles.textLogo1}>Ankasa</h4>
-          <div className={styles.textLogo2}>
-            <h3 className={`${styles.login} ${styles.register1}`}>Register</h3>
-          </div>
-          <div className={styles.loginBox}>
-            <form onSubmit={handleSubmit}>
-              <div className={`${styles.userBox} ${styles.userBoxZ}`}>
-                <input type="text" name="username" required="" onChange={handleInput} />
-                <label>Full Name</label>
+      <section className='login'>
+        <div className="container-fluid g-0">
+          <div className="row">
+            <div className="col-md-7">
+              <div className={`d-flex flex-row ${styles.leftside}`}>
+                <img src={banner} alt="" />
               </div>
-              <div className={styles.userBox}>
-                <input type="email" name="email" required="" onChange={handleInput}/>
-                <label>Email</label>
+            </div>
+            <div className="col-md-5 ">
+              <div className="rightside p-5">
+                <div className="d-flex flex-row">
+                  <img src={logo} alt="" className='me-5' />
+                  <p className={styles.titleLogo}>
+                    Angkasa
+                  </p>
+                </div>
+                <div className="d-flex flex-row mb-5">
+                  <p className={styles.title}>
+                    Register
+                  </p>
+                </div>
+                <div className="d-flex flex-column col-md-10">
+                <div class="form-floating mb-3">
+                    <input type="yext"className={`form-control  ${styles.formInput}`} id="floatingPassword" placeholder="name@example.com" />
+                    <label for="floatingInput">Full Name</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="email"className={`form-control  ${styles.formInput}`} id="floatingPassword" placeholder="name@example.com" />
+                    <label for="floatingInput">Email address</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="password"className={`form-control  ${styles.formInput}`} id="floatingPassword" placeholder="name@example.com" />
+                    <label for="floatingInput">Password</label>
+                  </div>
+                  
+                  <div class="d-grid gap-2 col-12 mx-auto my-4 ">
+                    <button class={styles.btnlogin} type="button">Sign Up</button>
+                  </div>
+                  <div className='d-flex flex-row  mb-5'>
+                  <input className="form-check-input mt-2 me-3" type="checkbox" value="" aria-label="Checkbox for following text input"/>
+                    <p className={styles.forgot}> Accept terms and condition </p>
+                  </div>  
+                  <hr/> 
+                  <p className='text-center'>
+                     Already have an account?
+                  </p>
+                  <button class={styles.btnsignin} type="button">Sign in</button>
+                </div>
               </div>
-              <div className={styles.userBox}>
-                <input type="password" name="password" required="" onChange={handleInput} />
-                <label>Password</label>
-              </div>
-            </form>
+            </div>
           </div>
-          <form className={`${styles.Button} btn d-flex `} role="search">
-            <button className={`${styles.signUp} ${styles.signUp3}`} type="submit">
-              Sign Up
-            </button>
-          </form>
-          <div className={styles.checkbox}>
-            <input type="checkbox" id="agree" name="agree" className={styles.tCheckbox} required />
-            <label className={styles.labelI} for="agree">
-              I agree to terms & conditions
-            </label>
-          </div>
-          <hr className={styles.hr} />
-          <div className={styles.forgot}>
-            <p className={`${styles.forgotP} ms-3`}>Already have an account?</p>
-          </div>
-          <form className={`${styles.ButtonLogin} d-flex  `} role="search">
-            <button className={`${styles.Login} ${styles.signUp1}  btn btn-outline-primary`} type="submit">
-              Sign In
-            </button>
-          </form>
         </div>
-      </div>
+      </section>
+
+
     </>
   );
 };

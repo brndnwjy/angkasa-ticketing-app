@@ -36,12 +36,6 @@
   font-size: 16px;
 }
 
-/* .logoC {
-  width: 200px;
-  height: 200px;
-  color: white;
-} */
-
 .c1 {
   height: 200vh;
 }
@@ -61,8 +55,7 @@
   position: relative;
   margin-bottom: 45px;
 }
-/* 
-input {
+.ii {
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;
@@ -70,33 +63,20 @@ input {
   border: none;
   border-bottom: 1px solid black;
 }
-input:focus {
-  outline: none;
-} */
 
-/* LABEL ======================================= */
-/* label {
+.Ti {
   color: #9b96ab;
   font-size: 14px;
   font-weight: normal;
   position: absolute;
   pointer-events: none;
   left: 5px;
-  top: 10px;
+
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
-} */
+}
 
-/* active state */
-/* input:focus ~ label,
-input:valid ~ label {
-  top: -20px;
-  font-size: 14px;
-  color: #9b96ab;
-} */
-
-/* BOTTOM BARS ================================= */
 .bar {
   position: relative;
   display: block;
@@ -121,13 +101,6 @@ input:valid ~ label {
   right: 50%;
 }
 
-/* active state */
-/* input:focus ~ .bar:before,
-input:focus ~ .bar:after {
-  width: 50%;
-} */
-
-/* HIGHLIGHTER ================================== */
 .highlight {
   position: absolute;
   height: 60%;
@@ -138,55 +111,22 @@ input:focus ~ .bar:after {
   opacity: 0.5;
 }
 
-/* active state
-input:focus ~ .highlight {
-  -webkit-animation: inputHighlighter 0.3s ease;
-  -moz-animation: inputHighlighter 0.3s ease;
-  animation: inputHighlighter 0.3s ease;
-} */
-
 .alert {
-  width: 650px;
+  /* width: 650px; */
   margin-top: 2.5rem !important;
 }
 
 .phone {
   width: 650px !important;
 }
+
 .grup1 {
   padding-top: 2rem;
 }
+
 .f {
   padding-top: 2rem;
 }
-/* ANIMATIONS ================
-@-webkit-keyframes inputHighlighter {
-  from {
-    background: #2395ff;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-@-moz-keyframes inputHighlighter {
-  from {
-    background: #2395ff;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-@keyframes inputHighlighter {
-  from {
-    background: #2395ff;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
-} */
 
 .pd {
   color: black;
@@ -195,6 +135,7 @@ input:focus ~ .highlight {
   margin-left: 4.5rem;
   margin-top: 3rem;
 }
+
 .containerFormPD {
   background-color: white;
   margin-top: 1.7rem;
@@ -212,24 +153,36 @@ input:focus ~ .highlight {
 }
 
 .contentForm {
-  width: 650px;
+  /* width: 650px; */
   padding-top: 2rem !important;
 }
 
-.alert1 {
+/* .alert1 {
   width: 650px;
   margin-left: 1.7rem;
+} */
+.bnr {
+  margin-left: -70rem;
+
+  height: 12rem;
+  color: white;
 }
 
-.national {
-  color: #9b96ab;
-  margin-bottom: 1rem !important ;
+.formR {
+  /* width: 650px; */
+  /* margin-left: 1.7rem; */
+  /* margin-top: 2.5rem; */
+  /* width: 100%; */
+  
+  background-color: white;
 }
-
-.Ti {
-  color: black;
-  margin-left: 3rem !important;
-  font-size: 25px;
+.nn {
+  /* padding: 20px; */
+  border-radius: 0px !important;
+  margin-top: 20px;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
 }
 
 .dollar {
@@ -270,7 +223,7 @@ input:focus ~ .highlight {
   font-weight: 600;
 }
 .sa {
-  margin-left: 16rem;
+  margin-left: 11rem;
 }
 
 .garuda {
