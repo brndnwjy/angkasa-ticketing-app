@@ -31,13 +31,14 @@ const Login = () => {
     if (form.email === "" || form.password === "") {
       alert("Data tidak boleh kosong");
     } else {
-      const form = {
-        email: form.email,
-        password: form.password,
-      };
+      // const form = {
+      //   email: form.email,
+      //   password: form.password,
+      // };
     dispacth(login(form, navigate))
   }
 }
+
   return (
     <>
       <section className='login'>

@@ -3,6 +3,7 @@ import styles from './home.module.css';
 import Navbar from '../../components/module/navbar/index';
 import Footer from '../../components/module/footer/index';
 import './top.css';
+import { Link } from 'react-router-dom';
 
 // Swiper js carousel
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -120,7 +121,7 @@ const Home = () => {
             </div>
           </div>
           <div className={styles.cardGrid}>
-            <a className={styles.card} href="#">
+            <Link to='' className={styles.card} >
               <div className={styles.cardBackground}>
                 <div className={styles.cardContent}>
                   <p className={styles.cardCategory}>Bali</p>
@@ -129,8 +130,8 @@ const Home = () => {
                   <h4 className={styles.fk}>From $200</h4>
                 </div>
               </div>
-            </a>
-            <a className={styles.card} href="#">
+            </Link>
+            <Link to='' className={styles.card} href="#">
               <div className={styles.cardBackground}>
                 <div className={styles.cardContent}>
                   <p className={styles.cardCategory}>Tokyo</p>
@@ -139,8 +140,8 @@ const Home = () => {
                   <h4 className={styles.fk}>From $100</h4>
                 </div>
               </div>
-            </a>
-            <a className={styles.card} href="#">
+            </Link>
+            <Link to='' className={styles.card} href="#">
               <div className={styles.cardBackground}>
                 <div className={styles.cardContent}>
                   <p className={styles.cardCategory}>Sidney</p>
@@ -149,9 +150,9 @@ const Home = () => {
                   <h4 className={styles.fk}>From $300</h4>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a className={styles.card} href="#">
+            <Link className={styles.card} href="#">
               <div className={styles.cardBackground}>
                 <div className={styles.cardContent}>
                   <p className={styles.cardCategory}>Beijing</p>
@@ -160,9 +161,9 @@ const Home = () => {
                   <h4 className={styles.fk}>From $400</h4>
                 </div>
               </div>
-            </a>
+            </Link>
 
-            <a className={styles.card} href="#">
+            <Link className={styles.card} href="#">
               <div className={styles.cardBackground}>
                 <div className={styles.cardContent}>
                   <p className={styles.cardCategory}>Jambi</p>
@@ -171,7 +172,7 @@ const Home = () => {
                   <h4 className={styles.fk}>From $1000</h4>
                 </div>
               </div>
-            </a>
+            </Link>
 
             <div></div>
           </div>

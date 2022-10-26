@@ -1,18 +1,19 @@
 import React from 'react';
 import styles from '../navbar/navbar.module.css';
 import logo from '../../../assets/logo.svg';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg  ">
         <div className={`${styles.containerNav} container-fluid ms-5`}>
-          <a className={`${styles.containerLogo} navbar-brand`} href="#">
+          <Link to='' className={`${styles.containerLogo} navbar-brand`} >
             <img className={styles.logo} src={logo} alt="Bootstrap" width="30" height="24" />
-          </a>
-          <a className="navbar-brand " href="#">
+          </Link>
+          <Link to='' className="navbar-brand">
             <h2 className={styles.logoText}>Ankasa</h2>
-          </a>
+          </Link>
           <button className="navbar-toggler  " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon "></span>
           </button>
@@ -22,14 +23,14 @@ const Navbar = () => {
             </form>
             <ul className="navbar-nav me-auto ms-5 mb-2 mb-lg-0 ">
               <li className={`${styles.menuText} nav-item  `}>
-                <a className=" nav-link active" data-bs-toggle="modal" data-bs-target="#exampleModal" aria-current="page" href="#">
+                <Link to='' className=" nav-link active" data-bs-toggle="modal" data-bs-target="#exampleModal" aria-current="page" >
                   Find Ticket
-                </a>
+                </Link>
               </li>
               <li className={`${styles.menuText} nav-item`}>
-                <a className="nav-link active" href="#">
+                <Link to='' className="nav-link active" >
                   My Booking
-                </a>
+                </Link>
               </li>
             </ul>
             <form className={`${styles.Button} d-flex `} role="search">

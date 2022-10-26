@@ -13,14 +13,20 @@ const Register = () => {
   const [registerForm, setRegisterForm] = useState({
     username: "",
     email: "",
-    password: "",
+    password: ""
   });
+  console.log(registerForm.username)
+  console.log(registerForm.email)
+  console.log(registerForm.password)
+
   const handleInput = (e) => {
     setRegisterForm({
       ...registerForm,
       [e.target.name]: e.target.value,
+      
     });
   };
+  // console.log(...registerForm)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,22 +63,28 @@ const Register = () => {
                   </p>
                 </div>
                 <div className="d-flex flex-column col-md-10">
-                <div class="form-floating mb-3">
-                    <input type="yext"className={`form-control  ${styles.formInput}`} id="floatingPassword" placeholder="name@example.com" />
-                    <label for="floatingInput">Full Name</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input type="email"className={`form-control  ${styles.formInput}`} id="floatingPassword" placeholder="name@example.com" />
-                    <label for="floatingInput">Email address</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input type="password"className={`form-control  ${styles.formInput}`} id="floatingPassword" placeholder="name@example.com" />
-                    <label for="floatingInput">Password</label>
-                  </div>
-                  
-                  <div class="d-grid gap-2 col-12 mx-auto my-4 ">
-                    <button class={styles.btnlogin} type="button">Sign Up</button>
-                  </div>
+                  <form onSubmit={(e) => handleSubmit(e)}>
+
+                    <div class="form-floating mb-3">
+                      <input type="text" className={`form-control  ${styles.formInput}`} id="username" name="username" onChange={handleInput} />
+                      <label htmlFor="username">Full Name</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="email" className={`form-control  ${styles.formInput}`} id="email" name="email" onChange={handleInput} />
+                      <label htmlFor="email">Email address</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="password" className={`form-control  ${styles.formInput}`} id="password" name="password" onChange={handleInput} />
+                      <label htmlFor="password">Password</label>
+                    </div>
+                    <div class="d-grid gap-2 col-12 mx-auto my-4 ">
+                      <button class={styles.btnlogin} type="submit">Sign Up</button>
+                    </div>
+                  </form>
+                
+
                   <div className='d-flex flex-row  mb-5'>
                   <input className="form-check-input mt-2 me-3" type="checkbox" value="" aria-label="Checkbox for following text input"/>
                     <p className={styles.forgot}> Accept terms and condition </p>

@@ -7,6 +7,7 @@ import twitter from '../../../assets/twitter.svg';
 import youtube from '../../../assets/youtube.svg';
 import facebook from '../../../assets/facebook.svg';
 import instagram from '../../../assets/instagram.svg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -30,16 +31,16 @@ const Footer = () => {
               <div className={styles.containerImg}>
                 <ul className={styles.list}>
                   <li className={styles.listLi}>
-                    <a>Find Ticket</a>
+                    <Link to=''>Find Ticket</Link>
                   </li>
                   <li className={styles.listLi}>
-                    <a className={styles.textA}>My Booking</a>
+                    <Link to='' className={styles.textA}>My Booking</Link>
                   </li>
                   <li className={styles.listLi}>
-                    <a className={styles.textB}>Chat</a>
+                    <Link to='' className={styles.textB}>Chat</Link>
                   </li>
                   <li className={styles.listLi}>
-                    <a className={styles.textC}>Notification</a>
+                    <Link to className={styles.textC}>Notification</Link>
                   </li>
                 </ul>
               </div>
