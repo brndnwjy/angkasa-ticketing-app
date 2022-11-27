@@ -20,27 +20,27 @@ const Search = () => {
             <div className='col-md-12'>
               <div className={styles.searchBlue}>
                 <div className='d-flex flex-column flex-md-row'>
-                  <img src={plane} className={styles.whiteplane}/>
+                  <img src={plane} className={styles.whiteplane} />
                   <div className='col-md-10'>
                     <div className='d-flex flex-row mt-5'>
                       <p className={`ms-2 ${styles.pFromto}`}>
-                      From
+                        From
                       </p>
                       <p className={styles.pFromto}> To </p>
                     </div>
                     <div className={`d-flex flex-row ${styles.setInput}`}>
-                    <input type="text" className={`ms-2 mb-3 ${styles.inputFormto}`} id="address" placeholder="Medan(IDN)"/> 
-                      <img src={ArrowWhite} className='mx-3 mb-3'/>
-                      <input type="text" className={`mb-3 ${styles.inputToForm}`} id="address" placeholder="Tokyo(JPN)"/> 
-                      <button type="button" className={styles.btncostum}>Change Search</button> 
+                      <input type="text" className={`ms-2 mb-3 ${styles.inputFormto}`} id="address" placeholder="Medan(IDN)" />
+                      <img src={ArrowWhite} className='mx-3 mb-3' />
+                      <input type="text" className={`mb-3 ${styles.inputToForm}`} id="address" placeholder="Tokyo(JPN)" />
+                      <button type="button" className={styles.btncostum}>Change Search</button>
                     </div>
                     <div className='d-flex flex-row'>
                       <p className={`ms-2 ${styles.pDay}`}>
-                      Monday, 20 July 20
+                        Monday, 20 July 20
                       </p>
-                      <img src={dotWhite} className='mx-2 mb-3'/>
+                      <img src={dotWhite} className='mx-2 mb-3' />
                       <p className={styles.pPassanger}> 6 Passenger</p>
-                      <img src={dotWhite} className='mx-2 mb-3'/>
+                      <img src={dotWhite} className='mx-2 mb-3' />
                       <p className={styles.pEconomy}>  Economy</p>
                     </div>
                   </div>
@@ -62,7 +62,7 @@ const Search = () => {
               </div>
             </div>
             <div className='col-md-8'>
-            <div className='d-flex flex-row'>
+              <div className='d-flex flex-row'>
                 <p className={`col-md-3 mt-3 ${styles.secTicket}`}>
                   Select Ticket
                 </p>
@@ -72,7 +72,7 @@ const Search = () => {
                 <p className={`my-4 me-2 ${styles.secSort}`}>
                   (Sort By)
                 </p>
-                <img src={SortArrow} className='my-4'/>
+                <img src={SortArrow} className='my-4' />
               </div>
             </div>
           </div>
@@ -215,12 +215,12 @@ const Search = () => {
                   </div>
                   <hr />
                   <div className='d-flex flex-row'>
-                    <p className={`col-md-9 mt-3 ${styles.price}`}>$ 145,00 </p>
-                    <p className={`ms-2 mt-3 ${styles.price}`}>$ 300,00 </p>
+                    <p className={`me-1 ${styles.textDollar}`}>$</p><input type="text" className={` mb-3 ${styles.inputPriceticket}`} id="address" placeholder="0" />
+                    <p className={`ms-auto me-1  ${styles.textDollar}`}>$</p><input type="text" className={`mb-3 ${styles.inputPriceticket}`} id="address" placeholder="0" />
+                    {/* <p className={`col-md-9 mt-3 ${styles.price}`}>$ 145,00 </p> */}
+                    {/* <p className={`ms-2 mt-3 ${styles.price}`}>$ 300,00 </p> */}
                   </div>
                 </div>
-
-
               </div>
             </div>
             <div className='col-md-8'>

@@ -1,10 +1,15 @@
 .benner {
   background-color: #2395ff;
-  width: 100%;
   height: 176px;
   border-radius: 0px 0px 30px 30px;
   justify-content: space-around;
   display: flex;
+}
+
+.bnr {
+  margin-left: -70rem;
+  height: 12rem;
+  color: white;
 }
 
 .textPerson {
@@ -23,7 +28,7 @@
   font-size: 24px;
   font-weight: 600;
   margin-top: 50px;
-  margin-left: 40rem;
+  margin-left: 500px;
   font-style: normal;
 }
 
@@ -32,324 +37,163 @@
   color: white;
   font-weight: 600;
   margin-top: 57px;
-  margin-left: 70rem;
+  margin-left: 1050px;
   font-size: 16px;
 }
 
-.c1 {
-  height: 200vh;
+.main{
+  background-color: #F5F6FA;
+  padding-bottom: 100px;
 }
 
-.cForm {
+.rightside{
   background-color: white;
-  margin-top: -4rem;
-  margin-left: 4.5rem;
-  height: 400px;
+  margin-top: -80px !important;
   border-radius: 15px;
-}
-.group {
-  margin-left: 1.7rem;
+  height: max-content;
 }
 
-.group {
-  position: relative;
-  margin-bottom: 45px;
-}
-.ii {
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: 650px;
-  border: none;
-  border-bottom: 1px solid black;
-}
-
-.Ti {
+.textLabelCP {
   color: #9b96ab;
   font-size: 14px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
+  font-weight: 400;
+  margin-bottom: 0;
 }
-
-.bar {
-  position: relative;
-  display: block;
-  width: 650px;
-}
-.bar:before,
-.bar:after {
-  content: '';
-  height: 2px;
-  width: 0;
-  bottom: 1px;
-  position: absolute;
-  background: #2395ff;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-}
-.bar:before {
-  left: 50%;
-}
-.bar:after {
-  right: 50%;
-}
-
-.highlight {
-  position: absolute;
-  height: 60%;
-  width: 200px;
-  top: 25%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-.alert {
-  /* width: 650px; */
-  margin-top: 2.5rem !important;
-}
-
-.phone {
-  width: 650px !important;
-}
-
-.grup1 {
-  padding-top: 2rem;
-}
-
-.f {
-  padding-top: 2rem;
-}
-
-.pd {
-  color: black;
-  font-size: 24px;
-  font-weight: 600;
-  margin-left: 4.5rem;
-  margin-top: 3rem;
-}
-
-.containerFormPD {
-  background-color: white;
-  margin-top: 1.7rem;
-  margin-left: 4.5rem;
-  height: 400px;
-  border-radius: 15px;
-}
-
-.containerFPD {
-  background-color: white;
-  margin-top: 1.7rem;
-  margin-left: 4.5rem;
-  height: 150px;
-  border-radius: 15px;
-}
-
-.contentForm {
-  /* width: 650px; */
-  padding-top: 2rem !important;
-}
-
-/* .alert1 {
-  width: 650px;
-  margin-left: 1.7rem;
-} */
-.bnr {
-  margin-left: -70rem;
-
-  height: 12rem;
-  color: white;
-}
-
-.formR {
-  /* width: 650px; */
-  /* margin-left: 1.7rem; */
-  /* margin-top: 2.5rem; */
-  /* width: 100%; */
-  
-  background-color: white;
-}
-.nn {
-  /* padding: 20px; */
+.inputStyle {
   border-radius: 0px !important;
-  margin-top: 20px;
   border-top: none !important;
   border-left: none !important;
   border-right: none !important;
+  border-bottom: 2px solid;
+  border-color: #d2c2ffad !important;
 }
 
-.dollar {
-  margin-left: 30rem;
-  color: #9b96ab;
-}
+/* .inputStyle:focus{
+  outline: none !important;
+  border: none !important;
+} */
 
-.Tn {
-  font-weight: 500;
-}
-
-.buttonW {
-  border-top: none;
-  border-left: none;
-}
-
-.Fi {
-  border-top: none;
-  border-right: none;
-}
-
-.fc {
-  margin-left: 2rem;
-}
-
-.hr {
-  margin-left: 3.6rem;
-}
-
-.gt {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
-  margin-left: 2rem;
-}
-.d1 {
-  color: #2395ff;
-  font-weight: 600;
-}
-.sa {
-  margin-left: 11rem;
-}
-
-.garuda {
-  background-color: white;
-  width: 442px !important;
-  height: 375px;
-  margin-top: -4rem;
-  border-radius: 15px;
-  margin-left: 1rem;
-}
-
-.imgGaruda {
-  margin-top: 2rem;
-  margin-left: 4rem;
-}
-.textGr {
-  color: #595959;
-  font-weight: 500;
-  font-size: 16px;
-
-  margin-left: 12rem;
-}
-.text1 {
-  margin-top: -2.4rem !important;
-}
-
-.buttonA {
-  margin-left: 16rem;
-  margin-top: 2rem;
-  width: 319px;
-  height: 57px;
-  background-color: #2395ff !important;
-  box-shadow: 0px 8px 10px rgba(35, 149, 255, 0.3);
+.reminder{
+  background-color:#F245451A ;
   border-radius: 10px;
-  border: none;
-  font-weight: 700;
 }
 
-.imgFL {
-  margin-left: 12.8rem;
-  margin-top: -3.6rem;
+/* .leftside{
+  background-color: white;
+  margin-top: -80px !important;
+  border-radius: 15px;
+} */
+
+.CPdetail{
+  background-color: white;
+  border-radius: 15px;
+  margin-top: -100px !important;
 }
 
-.location {
-  margin-top: 2rem;
+.textGaruda{
+  color:#595959;
+  margin-top: 20px;
+  font-size: 16px;
 }
 
-.TextM {
-  margin-top: 3.6rem;
-  margin-left: 4rem;
-  font-weight: 600;
+.textCity{
+  color:#000000 ;
   font-size: 18px;
-}
-
-.TextMT {
-  margin-left: 16rem;
-  margin-top: -3.2rem;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.sunday {
-  margin-left: 4rem;
-  margin-top: 1rem;
-}
-
-.textS {
-  font-weight: 400;
-  font-size: 12px;
-  color: #6b6b6b;
-}
-
-.textA {
-  font-weight: 400;
-  font-size: 18px;
-  color: #6b6b6b;
-  margin-left: 1rem;
-}
-.textB {
-  font-weight: 400;
-  font-size: 12px;
-  color: #6b6b6b;
-  margin-left: 1rem;
-}
-.ceklis {
-  margin-left: 4rem;
-  margin-top: 1rem;
-}
-.r {
   font-weight: 500;
-  font-size: 14px;
-  color: #2395ff;
-  margin-left: 0.6rem;
 }
 
-.c {
-  margin-top: 0.7rem;
+.textTime{
+  font-size: 12px;
+  font-weight: 400;
+  color: #6B6B6B ;
+}
+
+.textOptional{
+  color: #2395FF;
+  font-size: 14px;
   font-weight: 500;
-  font-size: 14px;
-  color: #2395ff;
-  margin-left: 0.6rem;
 }
 
-.hrQ {
-  margin-top: 1rem;
-}
-
-.tp {
-  margin-left: 4rem;
-  font-weight: 600;
+.textTotal{
+  color: #000000;
   font-size: 18px;
-  line-height: 27px;
+  font-weight: 500;
+  margin-top: 5px;
 }
 
-.dollar2 {
-  margin-left: 7rem;
-  font-weight: 600;
+.textPrice{
+  color: #2395FF;
   font-size: 24px;
-  color: #2395ff;
+  font-weight: 600;
 }
 
-.v {
-  width: 12px;
-  height: 12px;
+.textTitle{
+  color: #000000;
+  font-size: 24px;
   font-weight: 600;
-  margin-top: -5rem !important;
-  margin-left: 1rem !important;
-  color: #2395ff;
+}
+
+.passengerDetail{
+  border-radius: 15px;
+  background-color: white;
+}
+
+.reminderPassenger{
+  background-color: #2395FF1A;
+  border-radius: 10px;
+}
+
+.textPassenger{
+  color: #595959;
+  font-size: 14px;
+}
+
+.textInsurance{
+  color: #000000;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.textPriceinsurance{
+  font-size: 18px;
+  font-weight: 700;
+  color: #2395FF;
+}
+
+.textPax{
+  font-size: 14px;
+  font-weight: 600;
+  color: #979797;
+}
+
+.textCompensation{
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.cstmButton{
+  background-color: #2395FF !important;
+  color: white !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.cstmButton:hover{
+  background-color: #2395FF !important;
+  color: white !important;
+}
+@media only screen and (max-width: 720px) {
+  .rightside{
+    margin-top: 50px !important;
+  }
+  .fd{
+    display: none;
+  }
+  .vd{
+    display: none;
+  }
+  .textPerson{
+    display: none;
+  }
 }

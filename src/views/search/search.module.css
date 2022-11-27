@@ -48,7 +48,6 @@
 }
 .inputToForm::placeholder{ /* Microsoft Edge */
     color:#FFFFFF;
-
 }
 
 .inputToForm{
@@ -157,10 +156,32 @@
     
 }
 
-.price{
+.inputPriceticket{
+    border: none;
     color: #2395FF;
     font-size: 16px;
     font-weight: bold;
+    width: 80px;
+}
+
+.inputPriceticket:active{
+    border: none !important;
+}
+
+.textDollar{
+    color: #2395FF;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.inputPriceticket::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:#2395FF;
+}
+.inputPriceticket::-ms-input-placeholder{ /* Microsoft Edge */
+    color: #2395FF;
+}
+.inputPriceticket::placeholder{ /* Microsoft Edge */
+    color:#2395FF;
 }
 
 

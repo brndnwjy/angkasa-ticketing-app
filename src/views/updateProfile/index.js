@@ -13,8 +13,11 @@ import { updateProfile, deleteProfile } from "../../redux/actions/user.action";
 const Profile = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch()
+
+  const localUserid = localStorage.getItem("user_id")
   const { data: user } = useSelector((state) => state.user.user);
   console.log(user);
+
   const [update, setUpdate] = useState({});
 
   const user_id = user.user_id
@@ -212,13 +215,15 @@ const Profile = () => {
                         <button type="submit" className="btn btn-primary mt-3 ">
                           Save
                         </button>
-                        <button  className="btn btn-primary mt-3 btn-danger" onClick={(e) => deleteProfile(user_id, e)}>
-                          Delete
-                        </button>
+                        
                       </div>
                     </div>
                   </div>
                 </form>
+
+                <button  className="btn btn-primary mt-3 btn-danger" onClick={(e) => deleteProfile(user_id, e)}>
+                          Delete
+                        </button>
               </div>
             </div>
           </div>
