@@ -23,7 +23,7 @@ const Navbar = () => {
             </form>
             <ul className="navbar-nav me-auto ms-5 mb-2 mb-lg-0 ">
               <li className={`${styles.menuText} nav-item  `}>
-                <Link to='' className=" nav-link active" data-bs-toggle="modal" data-bs-target="#exampleModal" aria-current="page" >
+                <Link to='' className=" nav-link active" data-bs-toggle="modal" data-bs-target="#exampleModal" >
                   Find Ticket
                 </Link>
               </li>

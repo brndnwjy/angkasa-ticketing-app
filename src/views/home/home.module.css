@@ -9,6 +9,123 @@
   margin-top: 50px;
 }
 
+/* css modal */
+.cstmModal{
+  margin-top: 100px !important;
+  margin-right: 150px !important;
+}
+
+.textTitle{
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.textSubtitle{
+  font-size: 16px;
+  font-weight: 600;
+  color: #2395ff;
+}
+
+.searchLocation{
+  border-radius: 10px;
+  background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.pFromto{
+  color: #979797;
+  font-size: 12px;
+  font-weight: 400;
+  /* margin-right: 200px; */
+}
+
+.inputFormto{
+  border: none;
+  background-color: transparent;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.inputFormto:focus{
+  outline: none;
+}
+
+.inputToForm{
+  border: none;
+  background-color: transparent;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.inputToForm:focus{
+  outline: none;
+}
+
+.btnoneway{
+  height: 44px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background-color: #2395FF !important;
+  border: none;
+  border-radius: 5px;
+}
+
+.btnRound{
+  height: 44px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #595959;
+  background-color: #F0F0F0 !important;
+  border: none;
+  border-radius: 5px;
+}
+
+.textOption{
+  color:#6B6B6B;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.labelCheck{
+  font-size: 18px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.btnSearchaway{
+  height: 57px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background-color: #2395FF !important;
+  border: none;
+  border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 720px) {
+  .cstmModal{
+    margin-right: 5px !important;
+    margin-left: 5px !important;
+  }
+
+  .inputToForm{
+    margin-left: -10px !important;
+  }
+
+  .labelCheck{
+    font-size: 14px;
+  }
+  
+}
+/* end modal */
+
+
 .banner1 {
   display: flex;
   flex-direction: column;
@@ -68,65 +185,6 @@
   border: none !important;
 }
 
-.card2 {
-  width: 25rem;
-
-  border-radius: 12px;
-  padding-left: 4rem !important;
-  padding-top: 2rem;
-}
-.card10 {
-  box-shadow: 0px 8px 27px 0px #0e3f6c30;
-}
-
-.card2 h5 {
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.card2 h6 {
-  font-weight: 500;
-}
-
-.card2 p {
-  color: #2395ff;
-  font-weight: 600;
-}
-
-.back {
-  margin-top: 1rem;
-  position: absolute;
-}
-
-.btnBack {
-  margin-left: 20rem;
-  margin-top: -5rem;
-  width: 10px;
-  height: 10px;
-}
-
-.getLine {
-  width: 335px;
-  height: 97px;
-  margin-top: 5rem;
-  box-shadow: 0px 8px 27px rgba(14, 63, 108, 0.19);
-  border-radius: 12px;
-}
-
-.getLine h4 {
-  color: #979797;
-  font-size: 12px;
-  margin-left: 1rem;
-  padding-top: 0.6rem;
-}
-
-.getLine h3 {
-  color: #979797;
-  font-size: 12px;
-  font-weight: 300;
-  margin-top: -0.2rem;
-  margin-left: 1rem;
-}
 .cardCategory {
   font-weight: 600;
   font-size: 14px;
@@ -164,43 +222,11 @@
   margin-left: 1rem;
 }
 
-.to,
-.tokyo,
-.japan {
-  padding-left: 15.5rem;
-  margin-top: -7rem;
-}
-
-.panah {
-  padding-left: 9.7rem;
-  margin-top: -6.5rem;
-}
-
-.buttonContainer button {
-  border: none;
-  margin-top: 2rem;
-  border-radius: 6px;
-}
-
-.submit1 {
-  width: 156.82px;
-  height: 44px;
-  background-color: #2395ff !important;
-  color: #ffffff;
-  z-index: 1;
-}
-.submit2 {
-  width: 156.82px;
-  height: 44px;
-  margin-left: 1.2rem !important;
-  background: #f0f0f0 !important;
-}
-
 .img1 {
   background-color: pink;
   z-index: -2;
   margin-left: 3rem;
-  content: '';
+  content: "";
 }
 
 .img2 {
@@ -208,44 +234,6 @@
   height: 15px;
 }
 
-.departure {
-  margin-top: 1.5rem;
-  color: #979797;
-}
-.dep {
-  width: 21rem;
-}
-
-.person {
-  margin-top: 1.5rem;
-  color: #979797;
-}
-.child {
-  width: 10rem !important;
-}
-.adult1 {
-  width: 10rem !important;
-  margin-left: 11rem;
-  margin-top: -2.4rem;
-}
-.which {
-  margin-top: 1.5rem;
-  color: #979797;
-}
-
-.btnSF {
-  color: white;
-  margin-top: 5px;
-
-  background-color: #2395ff !important;
-  box-shadow: 0px 8px 10px 0px #2395ff4d;
-  border-radius: 10px;
-  height: 3rem;
-  width: 21rem;
-  margin-top: 2rem;
-  cursor: pointer;
-  border: none;
-}
 .trending {
   height: 400px;
   display: flex;
@@ -327,7 +315,7 @@
 }
 
 .card:before {
-  content: '';
+  content: "";
   display: block;
   padding-bottom: 150%;
   width: 100%;
@@ -361,7 +349,7 @@
 }
 
 .cardBackground {
-  background-image: url('../../assets/bali.jpg');
+  background-image: url("../../assets/bali.jpg");
 }
 
 .top {
@@ -381,7 +369,7 @@
   flex-direction: column;
   align-items: center;
   padding: 65px 100px;
-  background-image: url('../../assets/bg-top10.png');
+  background-image: url("../../assets/bg-top10.png");
   background-repeat: no-repeat;
   background-position: left bottom;
   /* margin-top: 30px; */

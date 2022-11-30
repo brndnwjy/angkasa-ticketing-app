@@ -21,10 +21,12 @@ export const register = (body) => {
             const user = result.data.token
             localStorage.setItem('token', user.token)
             localStorage.setItem('user', user.data)
+            alert("Login Success");
             dispatch({type:"LOGIN_FULFILLED", payload:user})
             navigate('/mybooking')
         }catch(error){
             console.log(error)
+            alert("Username or Password wrong");
             dispatch({type:"LOGIN_REJECTED"})
         }   
     }

@@ -1,11 +1,9 @@
-import React, {useState } from 'react';
+import React, { useState } from 'react';
 import styles from '../auth.module.css';
 import logo from '../../../assets/logo.svg';
 import banner from '../../../assets/banner.png'
-
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-
 
 const Register = () => {
   const navigate = useNavigate();
@@ -23,21 +21,32 @@ const Register = () => {
     setRegisterForm({
       ...registerForm,
       [e.target.name]: e.target.value,
-      
     });
   };
   // console.log(...registerForm)
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:4000/v1/user/register", registerForm)
-      .then((res) => {
-        console.log(res);
-        navigate("/login");
-      })
-      .catch((err) => console.log(err));
+    if (registerForm.username === "" || registerForm.email === "" || registerForm.password === "") {
+      alert("Data tidak boleh kosong");
+    }
+    else if (
+      registerForm.password.length >=5
+    ) {
+      axios
+        .post("http://localhost:4000/v1/user/register", registerForm)
+        .then((res) => {
+          console.log(res);
+          alert('Register Succes')
+          navigate("/login");
+        })
+        .catch((err) => console.log(err));
+    } else {
+      alert('password minimal 5 charackter')
+    }
   };
+
 
   return (
     <>
@@ -83,15 +92,13 @@ const Register = () => {
                       <button class={styles.btnlogin} type="submit">Sign Up</button>
                     </div>
                   </form>
-                
-
                   <div className='d-flex flex-row  mb-5'>
-                  <input className="form-check-input mt-2 me-3" type="checkbox" value="" aria-label="Checkbox for following text input"/>
+                    <input className="form-check-input mt-2 me-3" type="checkbox" value="" aria-label="Checkbox for following text input" />
                     <p className={styles.forgot}> Accept terms and condition </p>
-                  </div>  
-                  <hr/> 
+                  </div>
+                  <hr />
                   <p className='text-center'>
-                     Already have an account?
+                    Already have an account?
                   </p>
                   <button class={styles.btnsignin} type="button">Sign in</button>
                 </div>

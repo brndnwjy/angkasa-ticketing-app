@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./profileCard.module.css"
 import avatar from '../../../assets/avatar.png'
 import iconprofile from '../../../assets/user.png'
@@ -7,11 +7,26 @@ import iconsettings from '../../../assets/setting.svg'
 import iconlogout from '../../../assets/logout.svg'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import axios from 'axios'
 
 const ProfileCard = () => {
   const navigate = useNavigate();
 
   const { data: user } = useSelector((state) => state.user.user)
+  // console.log(user.user_id)
+  const [data, setData] = useState([]);
+  const id = user.user_id
+  useEffect(() => {
+    axios
+      .get(`http://localhost:4000/v1/user/${id}`)
+      .then((response) => {
+        console.log(response.data.data.rows);
+        setData(response.data.data.rows);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
   
   const logout = () => {
     localStorage.clear();
@@ -20,10 +35,12 @@ const ProfileCard = () => {
 
   return (
     <>
+    {/* {JSON.stringify(data)} */}
       {/* profile card left */}
       <section className={styles.profilecard}>
         <div className='container'>
           <div className='row'>
+          {data.map((item) => ( 
             <div className={styles.cardProfile}>
               <div className={`d-flex flex-row justify-content-center my-3 px-5 ${styles.picProfile}`}>
                 <img src={avatar}/>
@@ -34,10 +51,10 @@ const ProfileCard = () => {
               <div className='d-flex flex-column align-items-center my-3'> 
                 <h2>
                   {/* Mike Kowalski  */}
-                  {user.username}
+                  {item.username}
                 </h2> 
                 <p> 
-                  {user.address}
+                  {item.address}
                 {/* Medan, Indonesia */}
                 </p>
               </div>
@@ -79,6 +96,7 @@ const ProfileCard = () => {
                   <p className={`mx-5 ${styles.textLogout}`}> Logout </p>
               </button>
             </div>
+            ))}
           </div>
         </div>
       </section>

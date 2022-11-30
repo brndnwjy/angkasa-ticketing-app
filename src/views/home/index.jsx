@@ -4,6 +4,11 @@ import Navbar from '../../components/module/navbar/index';
 import Footer from '../../components/module/footer/index';
 import './top.css';
 import { Link } from 'react-router-dom';
+import icArrow from '../../assets/btnbackright.svg'
+import icArrowBlue from '../../assets/arrow.svg'
+import icFlight from '../../assets/icOneway.svg'
+import icRound from '../../assets/icRoundtrip.svg'
+import icArrSearch from '../../assets/icarrowsearch.svg'
 
 // Swiper js carousel
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -24,87 +29,87 @@ const Home = () => {
               </h1>
               <p>and explore the world with us</p>
             </div>
-
             <img className={styles.qq} src={require('../../assets/homeimage1.png')} alt="banner-1" />
           </div>
-
-          <div className={`${styles.card10} modal fade`} id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className={`${styles.modal} modal-dialog me-5 mt-5  `}>
+          {/* modal */}
+          <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className={`modal-dialog ${styles.cstmModal}`}>
               <div className="modal-content">
-                <div className="modal-header">
-                  <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div className="modal-body">
-                  <div className={`${styles.card2} card-body`}>
-                    <h6 className="card-title">Hey</h6>
-                    <h5 className="card-title">Where you want to go?</h5>
-                    <div className={styles.back}>
-                      <p className="card-text">Recently Searched</p>
-                      <img className={styles.btnBack} src={require('../../assets/btnback.png')} alt="btnback" />
+                <div className="modal-body p-5">
+                  <div className="d-flex flex-column">
+                    <p className={styles.textTitle}>Hey,
+                    </p>
+                    <p className={styles.textTitle}>Where you want to go?</p>
+                  </div>
+                  <div className="d-flex flex-row my-3">
+                    <div className={`me-auto ${styles.textSubtitle}`}>Recently Searched</div>
+                    <img src={icArrow} alt="bluearrow" />
+                  </div>
+                  <div className={`d-flex flex-column p-2 ${styles.searchLocation}`}>
+                    <div className='d-flex flex-row'>
+                      <p className={`ms-2 me-auto ${styles.pFromto}`}>
+                        From
+                      </p>
+                      <p className={`me-2 ${styles.pFromto}`}> To </p>
                     </div>
-
-                    <div className={styles.getLine}>
-                      <h4>From</h4>
-                      <h2>Medan</h2>
-                      <h3>Indonesia</h3>
-                      <img className={styles.panah} src={require('../../assets/Vector.png')} alt="panah" />
-                      <h4 className={styles.to}>To</h4>
-                      <h2 className={styles.tokyo}>Tokyo</h2>
-                      <h3 className={styles.japan}>Japan</h3>
-                    </div>
-
-                    <div className={styles.buttonContainer}>
-                      <button className={`${styles.submit1} btn btn-primary`} type="submit">
-                        One way
-                      </button>
-
-                      <button className={`${styles.submit2} btn btn-light text-dark`} type="submit">
-                        Round trip
-                      </button>
-                    </div>
-                    <div className={styles.departure}>
-                      <h6>Departure</h6>
-                      <select className={`${styles.dep} form-select`} aria-label="Default select example">
-                        <option selected>Monday, 25 October 2022</option>
-                      </select>
-                    </div>
-                    <div className={styles.person}>
-                      <h6>How many person?</h6>
-                      <select className={`${styles.child} form-select`} aria-label="Default select example">
-                        <option selected>2 Child</option>
-                      </select>
-                      <select className={`${styles.adult1} form-select`} aria-label="Default select example">
-                        <option selected>4 Adult</option>
-                      </select>
-                    </div>
-                    <div className={styles.which}>
-                      <h6>Which className do you want?</h6>
-                      <div classsName={`${styles.ol} form-check mx-5 `}>
-                        <input classsName="form-check-input mx-5" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                        <label classsName="form-check-label mx-5" for="flexRadioDefault1">
-                          Economy
-                        </label>
-
-                        <input classsName="form-check-input mx-5 " type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                        <label classsName="form-check-label mx-5 " for="flexRadioDefault1">
-                          Business
-                        </label>
-
-                        <input classsName="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                        <label classsName="form-check-label" for="flexRadioDefault1">
-                          First Class
-                        </label>
-                      </div>
-                      <div className={styles.button}>
-                        <button className={`${styles.btnSF} btn btn-primary `}>SEARCH FLIGHT</button>
-                      </div>
+                    <div className={`d-flex flex-row ${styles.setInput}`}>
+                      <input type="text" className={`ms-2 mb-3 col-5  ${styles.inputFormto}`} id="address" placeholder="Medan(IDN)" />
+                      <img src={icArrowBlue} className={`mx-3 mb-3 ${styles.cstmicArrow}`} />
+                      <input type="text" className={`text-end mb-3 col-5 ${styles.inputToForm}`} id="address" placeholder="Tokyo(JPN)" />
                     </div>
                   </div>
+                  <div className="d-flex flex-row gap-2 col-12 mx-auto mt-4">
+                    <button className={`p-1 col-6 ${styles.btnoneway}`} type="button"> <img src={icFlight} alt="oneway" /> One Way</button>
+                    <button className={`p-1 col-6 ${styles.btnRound}`} type="button"> <img src={icRound} alt="roundwtrip" />  Round Trip</button>
+                  </div>
+                  <div className="d-flex flex-column mt-4">
+                    <p className={styles.textOption}>Depature</p>
+                    <input type="date" className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
+                  </div>
+                  <p className={`mt-4 ${styles.textOption}`}>How many person?</p>
+                  <div className="d-flex flex-row">
+                    <div className="input-group mb-3 me-3">
+                      <select className="form-select" id="inputGroupSelect01">
+                        <option value="1">1 Child</option>
+                        <option value="2">2 Child</option>
+                        <option value="3">3 Child</option>
+                      </select>
+                    </div>
+                    <div className="input-group mb-3 ms-3">
+                      <select className="form-select" id="inputGroupSelect02">
+                        <option value="1">1 Adult</option>
+                        <option value="2">2 Adult</option>
+                        <option value="3">3 Adult</option>
+                      </select>
+                    </div>
+                  </div>
+                  <p className={styles.textOption}>Which class do you want?</p>
+                  <div className="d-flex flex-row">
+                    <div className="form-check mx-auto">
+                      <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label className={styles.labelCheck} for="flexRadioDefault1">
+                        Economy
+                      </label>
+                    </div>
+                    <div className="form-check mx-auto">
+                      <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label className={styles.labelCheck} for="flexRadioDefault1">
+                        Business
+                      </label>
+                    </div>
+                    <div className="form-check mx-auto">
+                      <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label className={styles.labelCheck} for="flexRadioDefault1">
+                        First Class
+                      </label>
+                    </div>
+                  </div>
+                  <button className={`p-1 col-12 mt-4 ${styles.btnSearchaway}`} type="button">  SEARCH FLIGHT <img src={icArrSearch} alt="search" className='ms-5 ' /></button>
                 </div>
               </div>
             </div>
           </div>
-
+          {/* end modal */}
           <div className={styles.banner2}>
             <img className={styles.qq} src={require('../../assets/homeimage2.png')} alt="banner-2" />
 
