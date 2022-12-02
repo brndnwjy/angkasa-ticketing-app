@@ -4,6 +4,7 @@ import logo from '../../../assets/logo.svg';
 import banner from '../../../assets/banner.png'
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import { register } from '../../../redux/actions/user.action';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -11,10 +12,12 @@ const Register = () => {
   const [registerForm, setRegisterForm] = useState({
     username: "",
     email: "",
+    phone:"",
     password: ""
   });
   console.log(registerForm.username)
   console.log(registerForm.email)
+  console.log(registerForm.phone)
   console.log(registerForm.password)
 
   const handleInput = (e) => {
@@ -28,20 +31,24 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (registerForm.username === "" || registerForm.email === "" || registerForm.password === "") {
+    if (registerForm.username === "" || registerForm.email === "" || registerForm.phone === "" || registerForm.password === "") {
       alert("Data tidak boleh kosong");
     }
     else if (
       registerForm.password.length >=5
     ) {
-      axios
-        .post("http://localhost:4000/v1/user/register", registerForm)
-        .then((res) => {
-          console.log(res);
-          alert('Register Succes')
-          navigate("/login");
-        })
-        .catch((err) => console.log(err));
+      const handleSuccess = (data) => {
+        console.log(data)
+        console.log(data.data.code)
+        if(data.data.code === 500){
+          alert("email atau phone sudah terdaftar")
+        }else{
+          alert("register sukses")
+          navigate('/login')
+        }
+      }
+      console.log(registerForm)      
+      register(registerForm, handleSuccess)
     } else {
       alert('password minimal 5 charackter')
     }
@@ -82,6 +89,11 @@ const Register = () => {
                     <div class="form-floating mb-3">
                       <input type="email" className={`form-control  ${styles.formInput}`} id="email" name="email" onChange={handleInput} />
                       <label htmlFor="email">Email address</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="text" className={`form-control  ${styles.formInput}`} id="phone" name="phone" onChange={handleInput} />
+                      <label htmlFor="phone">Phone</label>
                     </div>
 
                     <div class="form-floating mb-3">

@@ -1,10 +1,11 @@
 // user action
 import axios from "axios";
 
-export const register = (body) => {
+export const register = (body, handleSuccess) => {
         return new Promise((resolve, reject) => {           
-            axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/register`, body)
+            axios.post(`https://dead-rose-train.cyclic.app/v1/user/register`, body)
             .then((response) => {
+                handleSuccess(response)
                 resolve(response)
             })
             .catch((err) => {
@@ -16,9 +17,10 @@ export const register = (body) => {
     export const login = (form, navigate) => async(dispatch) => {
         try{
             dispatch({type:"LOGIN_PENDING"})
-            const result = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/login`, form)
-            // console.log(result)
-            const user = result.data.token
+            const result = await axios.post(`https://dead-rose-train.cyclic.app/v1/user/login`, form)
+            console.log(result.data.data.data)
+            console.log(result.data.data.token)
+            const user = result.data.data
             localStorage.setItem('token', user.token)
             localStorage.setItem('user', user.data)
             alert("Login Success");
