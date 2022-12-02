@@ -15,12 +15,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import NavbarLogin from '../../components/module/navbarLogin';
 
 const Home = () => {
   return (
     <>
+    {localStorage.token ? <NavbarLogin/> : <Navbar/>}
       <div className={styles.homePage}>
-        <Navbar />
         <main className={styles.main}>
           <div className={styles.banner1}>
             <div>

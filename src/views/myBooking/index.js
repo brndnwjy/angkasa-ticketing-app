@@ -3,12 +3,13 @@ import styles from "./myBooking.module.css";
 import BookingCard from '../../components/module/bookingCard';
 import ProfileCard from '../../components/module/profileCard';
 import Navbar from '../../components/module/navbar';
+import NavbarLogin from '../../components/module/navbarLogin';
 import Footer from '../../components/module/footer'
 
 const MyBooking = () => {
   return (
     <>
-      <Navbar/>
+      {localStorage.token ? <NavbarLogin /> : <Navbar />}
       <main className='bodycontent'>
         <div className='container my-5'>
           <div className='row'>

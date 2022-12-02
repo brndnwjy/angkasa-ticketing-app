@@ -12,11 +12,12 @@ import icDown from '../../assets/btnback.svg'
 
 // import v from '../../assets/btnback.png';
 import { Link } from 'react-router-dom';
+import NavbarLogin from '../../components/module/navbarLogin';
 
 const FlightDetail = () => {
   return (
     <>
-      <Navbar />
+      {localStorage.token ? <NavbarLogin/> : <Navbar/>}
       <section>
         <div className="row">
           <div className={`${styles.benner} col-12`}>

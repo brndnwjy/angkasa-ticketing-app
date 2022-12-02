@@ -21,6 +21,7 @@ export const register = (body, handleSuccess) => {
             console.log(result.data.data.data)
             console.log(result.data.data.token)
             const user = result.data.data
+            // console.log(user)
             localStorage.setItem('token', user.token)
             localStorage.setItem('user', user.data)
             alert("Login Success");
@@ -37,7 +38,7 @@ export const detailProfile = (user_id) => {
     return {
         type: 'GET_DATA_PROFILE',
         payload: axios ({
-            url: `${process.env.REACT_APP_BACKEND_URL}/${user_id}`,
+            url: `https://dead-rose-train.cyclic.app/v1/${user_id}`,
             method:"GET"
         })
     }
@@ -47,7 +48,7 @@ export const updateProfile = (user_id, update, handleSuccess) => ({
     type : "UPDATE_PROFILE",
     payload : new Promise((resolve, reject) => {
         axios
-        .put(`${process.env.REACT_APP_BACKEND_URL}/user/update/${user_id}`, update)
+        .put(`https://dead-rose-train.cyclic.app/v1/user/update/${user_id}`, update)
         .then((response) => {
             console.log(response.data)
             handleSuccess(response.data)
@@ -63,7 +64,7 @@ export const deleteProfile = (user_id) => ({
     type: "DELETE_PROFILE",
     payload : new Promise((resolve, reject) => {
        axios
-        .delete(`${process.env.REACT_APP_BACKEND_URL}/delete/${user_id}`)
+        .delete(`https://dead-rose-train.cyclic.app/v1/delete/${user_id}`)
         .then((response) => {
             console.log(response.data)
             resolve(response);

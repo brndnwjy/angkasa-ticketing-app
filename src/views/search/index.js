@@ -8,12 +8,13 @@ import iconarrowbtm from '../../assets/btnback.svg'
 import SortArrow from '../../assets/sortarrow.svg'
 import ArrowWhite from '../../assets/arrowwhite.svg'
 import dotWhite from '../../assets/dotwhite.svg'
+import NavbarLogin from '../../components/module/navbarLogin';
 
 
 const Search = () => {
   return (
     <>
-      <Navbar />
+      {localStorage.token ? <NavbarLogin/> : <Navbar/>}
       <section className='searchresult'>
         <div className='container-fluid'>
           <div className='row'>
@@ -93,19 +94,18 @@ const Search = () => {
                 <div class="collapse" id="Transit">
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 mt-3 ${styles.valuecollapse}`}>Direct </p>
-                    <input className="form-check-input me-1 mt-3" type="checkbox" value="" id="firstCheckbox" />
+                    <input className="form-check-input me-1 mt-3" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 ${styles.valuecollapse}`}>Transit </p>
-                    <input className="form-check-input me-1" type="checkbox" value="" id="secondCheckbox" />
+                    <input className="form-check-input me-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 ${styles.valuecollapse}`}>Transit 2+ </p>
-                    <input className="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox" />
+                    <input className="form-check-input me-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                 </div>
                 <hr />
-
                 <div className='d-flex flex-row'>
                   <button className={`col-md-10 ${styles.titleFiltercollapse}`} type="button" data-bs-toggle="collapse" data-bs-target="#Fascilities" aria-expanded="false" aria-controls="collapseExample"> Fascilities </button>
                   <button className={`ms-3 ${styles.btnarrow}`} type="button" data-bs-toggle="collapse" data-bs-target="#Fascilities" aria-expanded="false" aria-controls="collapseExample">
@@ -115,15 +115,15 @@ const Search = () => {
                 <div class="collapse" id="Fascilities">
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 mt-3 ${styles.valuecollapse}`}>Luggage </p>
-                    <input className="form-check-input me-1 mt-3" type="checkbox" value="" id="firstCheckbox" />
+                    <input className="form-check-input me-1 mt-3" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 ${styles.valuecollapse}`}>In-Flight Meal </p>
-                    <input className="form-check-input me-1" type="checkbox" value="" id="secondCheckbox" />
+                    <input className="form-check-input me-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 ${styles.valuecollapse}`}>Wi-fi </p>
-                    <input className="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox" />
+                    <input className="form-check-input me-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                 </div>
                 <hr />
@@ -137,19 +137,19 @@ const Search = () => {
                 <div class="collapse" id="DepatureTime">
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 mt-3 ${styles.valuecollapse}`}>00:00 - 06:00 </p>
-                    <input className="form-check-input me-1 mt-3" type="checkbox" value="" id="firstCheckbox" />
+                    <input className="form-check-input me-1 mt-3" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 ${styles.valuecollapse}`}>06:00 - 12:00 </p>
-                    <input className="form-check-input me-1" type="checkbox" value="" id="secondCheckbox" />
+                    <input className="form-check-input me-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 ${styles.valuecollapse}`}>12:00 - 18:00</p>
-                    <input className="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox" />
+                    <input className="form-check-input me-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 ${styles.valuecollapse}`}>18:00 - 24:00</p>
-                    <input className="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox" />
+                    <input className="form-check-input me-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                 </div>
                 <hr />
@@ -163,19 +163,19 @@ const Search = () => {
                 <div class="collapse" id="Arrived">
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 mt-3 ${styles.valuecollapse}`}>00:00 - 06:00 </p>
-                    <input className="form-check-input me-1 mt-3" type="checkbox" value="" id="firstCheckbox" />
+                    <input className="form-check-input me-1 mt-3" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 ${styles.valuecollapse}`}>06:00 - 12:00 </p>
-                    <input className="form-check-input me-1" type="checkbox" value="" id="secondCheckbox" />
+                    <input className="form-check-input me-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 ${styles.valuecollapse}`}>12:00 - 18:00</p>
-                    <input className="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox" />
+                    <input className="form-check-input me-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 ${styles.valuecollapse}`}>18:00 - 24:00</p>
-                    <input className="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox" />
+                    <input className="form-check-input me-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                 </div>
                 <hr />
@@ -189,15 +189,15 @@ const Search = () => {
                 <div class="collapse" id="collapseAirlines">
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 mt-3 ${styles.valuecollapse}`}>Garuda Indonesia </p>
-                    <input className="form-check-input me-1 mt-3" type="checkbox" value="" id="firstCheckbox" />
+                    <input className="form-check-input me-1 mt-3" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 ${styles.valuecollapse}`}>Air Asia </p>
-                    <input className="form-check-input me-1" type="checkbox" value="" id="secondCheckbox" />
+                    <input className="form-check-input me-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 ${styles.valuecollapse}`}>Lion Air </p>
-                    <input className="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox" />
+                    <input className="form-check-input me-1" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                   </div>
                 </div>
                 <hr />

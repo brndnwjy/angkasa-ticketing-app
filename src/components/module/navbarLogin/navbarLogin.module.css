@@ -64,6 +64,17 @@ body {
   .Button {
     margin-right: 120px;
   }
+
+  .btnNotif{
+    background-color: white;
+    border: none;
+}
+
+.btnAva{
+  background-color: transparent;
+  border: 3px solid #2395FF ;
+  border-radius: 100%;
+}
   
   @media only screen and (max-width: 720px) {
     .logoText {

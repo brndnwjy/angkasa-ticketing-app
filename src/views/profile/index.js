@@ -7,6 +7,7 @@ import Arrowright from '../../assets/btnbackright.svg'
 import { useParams } from 'react-router-dom';
 import {  useSelector } from 'react-redux';
 import axios from 'axios';
+import NavbarLogin from '../../components/module/navbarLogin';
 
 const Profile = () => {
   // const dataProfile = JSON.parse(localStorage.getItem('data'));
@@ -16,10 +17,10 @@ const Profile = () => {
   const id = user.user_id
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/v1/user/${id}`)
+      .get(`https://dead-rose-train.cyclic.app/v1/user/${id}`)
       .then((response) => {
-        console.log(response.data.data.rows);
-        setData(response.data.data.rows);
+        console.log(response.data.data);
+        setData(response.data.data);
       })
       .catch((error) => {
         console.error(error);
@@ -28,8 +29,7 @@ const Profile = () => {
 
   return (
     <>
-
-      <Navbar />
+      {localStorage.token ? <NavbarLogin /> : <Navbar />}
       {/* {JSON.stringify(data)} */}
       <main className='bodycontent'>
         <div className='container my-5'>
@@ -48,7 +48,7 @@ const Profile = () => {
                   Profile
                   {/* :{user.user_id} */}
                 </p>
-                {data.map((item) => ( 
+                
                 <div className='d-flex flex-column flex-md-row my-4 detailProfile'>
                   <div className='col-md-6 me-4'>
                      <div className='d-flex flex-column detailProfileleft'>
@@ -56,9 +56,9 @@ const Profile = () => {
                         Contact
                       </p>
                       <label for="email" className={`mt-3 ms-3 ${styles.labelForm}`}>Email address</label>
-                      <input type="email" className={styles.inputProfile} id="email" defaultValue={item.email} disabled />
+                      <input type="email" className={styles.inputProfile} id="email" defaultValue={data.email} disabled />
                       <label for="phone" className={`mt-3 ms-3 ${styles.labelForm}`}>Phone Number</label>
-                      <input type="text" className={styles.inputProfile} id="phone" defaultValue={item.phone} disabled />
+                      <input type="text" className={styles.inputProfile} id="phone" defaultValue={data.phone} disabled />
                       <div className='d-flex flex-row'>
                         <p className='col-md-5'></p>
                         <p className={`mt-3  ${styles.accountSettings}`}> Account Settings </p>
@@ -72,17 +72,17 @@ const Profile = () => {
                         Biodata
                       </p>
                       <label for="username" className={`mt-3 ms-3 ${styles.labelForm}`}>Username</label>
-                      <input type="text" className={styles.inputProfile} id="username" defaultValue={item.username} disabled />
+                      <input type="text" className={styles.inputProfile} id="username" defaultValue={data.username} disabled />
                       <label for="city" className={`mt-3 ms-3 ${styles.labelForm}`}> City </label>
-                      <input type="text" className={styles.inputProfile} id="city" defaultValue={item.city} disabled />
+                      <input type="text" className={styles.inputProfile} id="city" defaultValue={data.city} disabled />
                       <label for="address" className={`mt-3 ms-3 ${styles.labelForm}`}> Address </label>
-                      <input type="text" className={styles.inputProfile} id="address" defaultValue={item.address} disabled />
+                      <input type="text" className={styles.inputProfile} id="address" defaultValue={data.address} disabled />
                       <label for="Postcode" className={`mt-3 ms-3 ${styles.labelForm}`}>Post Code</label>
-                      <input type="text" className={styles.inputProfile} id="Postcode" defaultValue={item.postcode} disabled />
+                      <input type="text" className={styles.inputProfile} id="Postcode" defaultValue={data.postcode} disabled />
                     </div>
                   </div>
                 </div>
-                ))}
+               
               </div>
             </div>
           </div>

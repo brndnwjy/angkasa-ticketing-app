@@ -6,12 +6,13 @@ import Footer from '../../components/module/footer';
 import Option from '../../assets/iconOption.svg'
 import Qrcode from '../../assets/QRCode1.svg'
 import iconflight from '../../assets/flight.svg'
+import NavbarLogin from '../../components/module/navbarLogin';
 
 
 const BookingDetail = () => {
   return (
     <>
-      <Navbar />
+      {localStorage.token ? <NavbarLogin/> : <Navbar/>}
       <main className='bodycontent'>
         <div className={`container-fluid ${styles.ticket}`}>
           <div className='row'>

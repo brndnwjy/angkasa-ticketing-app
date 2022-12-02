@@ -9,6 +9,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { detailProfile } from "../../redux/actions/user.action";
 import { updateProfile, deleteProfile } from "../../redux/actions/user.action";
+import NavbarLogin from "../../components/module/navbarLogin";
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -87,7 +88,7 @@ const Profile = () => {
 
   return (
     <>
-      <Navbar />
+      {localStorage.token ? <NavbarLogin/> : <Navbar/>}
       {/* {JSON.stringify(user)} */}
       <main className="bodycontent">
         <div className="container my-5">
