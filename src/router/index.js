@@ -1,22 +1,18 @@
-import React, { useEffect } from "react";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
-import Login from "../views/auth/login"
-import Register from "../views/auth/register"
-import ForgotPassword from "../views/auth/forgotPassword"
+import Login from '../views/auth/login';
+import Register from '../views/auth/register';
+import ForgotPassword from '../views/auth/forgotPassword';
 
-import Home from "../views/home"
-import Search from "../views/search";
-import BookingDetail from "../views/bookingDetail"
-import FlightDetail from "../views/flightDetail"
+import Home from '../views/home/index';
+import Search from '../views/search';
+import BookingDetail from '../views/bookingDetail';
+import FlightDetail from '../views/flightDetail';
 
-import MyBooking from "../views/myBooking"
-import Profile from "../views/profile"
+import MyBooking from '../views/myBooking';
+import Profile from '../views/profile';
+import UpdateProfile from '../views/updateProfile'
 
 const ScrollToTop = ({ children }) => {
   const { pathname } = useLocation();
@@ -31,20 +27,22 @@ const ScrollToTop = ({ children }) => {
 const Router = () => {
   return (
     <BrowserRouter>
-    <ScrollToTop>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/forgotpassword" element={<ForgotPassword />} />
+      <ScrollToTop>
+        <Routes>
+          <Route path="/login" element={<Login />} />
 
-        <Route path="/" element={<Home />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/booking" element={<BookingDetail />} />
-        <Route path="/flight" element={<FlightDetail />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/forgotpassword" element={<ForgotPassword />} />
 
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/mybooking" element={<MyBooking />} />
-      </Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/booking" element={<BookingDetail />} />
+          <Route path="/flight" element={<FlightDetail />} />
+
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/mybooking" element={<MyBooking />} />
+          <Route path="/updateProfile/user/:id" element={<UpdateProfile/>}/>
+        </Routes>
       </ScrollToTop>
     </BrowserRouter>
   );
