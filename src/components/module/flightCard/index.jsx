@@ -50,7 +50,7 @@ const FlightCard = (dataFlights) => {
                 <img src={iconflight} className="ms-3 mt-3 iconplane" />
               </div>
               <div className="col-md-1 ">
-                <p>{item.arrival_city} <span>({item.arrival_country})</span></p>
+                <p>{item.arrival_city} <span>({item.arrivalm_country})</span></p>
                 <p>
                 {
                     item.departure_time === 0 ? (<>05:00</>) : 
@@ -85,7 +85,7 @@ const FlightCard = (dataFlights) => {
                 </p>
               </div>
               <div className="col-md-2">
-                <Link to={`/select/${item.flight_id}`} className={`btn btn-primary mt-4 ${styles.btncostum}`}>
+                <Link to={`/flight/${item.flight_id}`} className={`btn btn-primary mt-4 ${styles.btncostum}`}>
                   SELECT
                 </Link>
               </div>
