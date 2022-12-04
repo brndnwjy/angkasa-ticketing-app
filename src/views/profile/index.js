@@ -29,7 +29,7 @@ const Profile = () => {
 
   return (
     <>
-      {localStorage.token ? <NavbarLogin /> : <Navbar />}
+      {localStorage.token ? <NavbarLogin/> : <Navbar/>}
       {/* {JSON.stringify(data)} */}
       <main className='bodycontent'>
         <div className='container my-5'>
@@ -55,9 +55,9 @@ const Profile = () => {
                       <p className={styles.contact}>
                         Contact
                       </p>
-                      <label for="email" className={`mt-3 ms-3 ${styles.labelForm}`}>Email address</label>
+                      <label htmlFor="email" className={`mt-3 ms-3 ${styles.labelForm}`}>Email address</label>
                       <input type="email" className={styles.inputProfile} id="email" defaultValue={data.email} disabled />
-                      <label for="phone" className={`mt-3 ms-3 ${styles.labelForm}`}>Phone Number</label>
+                      <label htmlFor="phone" className={`mt-3 ms-3 ${styles.labelForm}`}>Phone Number</label>
                       <input type="text" className={styles.inputProfile} id="phone" defaultValue={data.phone} disabled />
                       <div className='d-flex flex-row'>
                         <p className='col-md-5'></p>
@@ -71,13 +71,13 @@ const Profile = () => {
                       <p className={styles.biodata}>
                         Biodata
                       </p>
-                      <label for="username" className={`mt-3 ms-3 ${styles.labelForm}`}>Username</label>
+                      <label htmlFor="username" className={`mt-3 ms-3 ${styles.labelForm}`}>Username</label>
                       <input type="text" className={styles.inputProfile} id="username" defaultValue={data.username} disabled />
-                      <label for="city" className={`mt-3 ms-3 ${styles.labelForm}`}> City </label>
+                      <label htmlFor="city" className={`mt-3 ms-3 ${styles.labelForm}`}> City </label>
                       <input type="text" className={styles.inputProfile} id="city" defaultValue={data.city} disabled />
-                      <label for="address" className={`mt-3 ms-3 ${styles.labelForm}`}> Address </label>
+                      <label htmlFor="address" className={`mt-3 ms-3 ${styles.labelForm}`}> Address </label>
                       <input type="text" className={styles.inputProfile} id="address" defaultValue={data.address} disabled />
-                      <label for="Postcode" className={`mt-3 ms-3 ${styles.labelForm}`}>Post Code</label>
+                      <label htmlFor="Postcode" className={`mt-3 ms-3 ${styles.labelForm}`}>Post Code</label>
                       <input type="text" className={styles.inputProfile} id="Postcode" defaultValue={data.postcode} disabled />
                     </div>
                   </div>

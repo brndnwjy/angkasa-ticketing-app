@@ -6,7 +6,9 @@ import Navbar from '../../components/module/navbar';
 import NavbarLogin from '../../components/module/navbarLogin';
 import Footer from '../../components/module/footer'
 
+
 const MyBooking = () => {
+  
   return (
     <>
       {localStorage.token ? <NavbarLogin /> : <Navbar />}
@@ -27,7 +29,6 @@ const MyBooking = () => {
                 </div>
               </div>         
               <div className='rightside'>
-                <BookingCard/>
                 <BookingCard/>
               </div>
            </div>          

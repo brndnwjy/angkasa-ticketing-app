@@ -60,16 +60,16 @@ const Login = () => {
                 </div>
                 <div className="d-flex flex-column col-md-10">
                   <form onSubmit={handleSubmit}>
-                    <div class="form-floating mb-3">
+                    <div className="form-floating mb-3">
                       <input type="email" className={`form-control  ${styles.formInput}`} id="floatingPassword" placeholder="name@example.com" name="email" onChange={handleInput} />
-                      <label for="floatingInput">Email address</label>
+                      <label htmlFor="floatingInput">Email address</label>
                     </div>
                     <div className='form-floating'>
                       <input type="password" className={`form-control  ${styles.formInput}`} id="floatingPassword" placeholder="Password" name="password" onChange={handleInput} />
-                      <label for="floatingPassword">Password</label>
+                      <label htmlFor="floatingPassword">Password</label>
                     </div>
-                    <div class="d-grid gap-2 col-12 mx-auto my-4 ">
-                      <button class={styles.btnlogin} type="submit">Sign In</button>
+                    <div className="d-grid gap-2 col-12 mx-auto my-4 ">
+                      <button className={styles.btnlogin} type="submit">Sign In</button>
                     </div>
                   </form>
                   <div className='d-flex flex-column align-items-center justify-content-center mb-5'>

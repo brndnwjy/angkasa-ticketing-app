@@ -15,13 +15,30 @@ const Profile = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch()
 
-  const localUserid = localStorage.getItem("user_id")
+  // const localUserid = localStorage.getItem("user_id")
   const { data: user } = useSelector((state) => state.user.user);
   console.log(user);
+  const [loading, setLoading] = useState(false)
 
   const [update, setUpdate] = useState({});
-
+  const [data, setData] = useState([])
   const user_id = user.user_id
+
+  useEffect(() => {
+    console.log(user)
+    setLoading(true)
+    axios
+      .get(`https://dead-rose-train.cyclic.app/v1/user/${user_id}`)
+      .then((response) => {
+        console.log(response.data.data);
+        setData(response.data.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+    setLoading(false)
+  },[])
+
 
   const handleInput = (e) => {
     setUpdate({
@@ -33,37 +50,35 @@ const Profile = () => {
   const handlePost = (e) => {
     e.preventDefault();
     const handleSuccess = (data) => {
-      console.log(data);  
-      if(data){
-         alert("Update Success");
-      return navigate("/profile");
-      }else{
+      console.log(data);
+      if (data) {
+        alert("Update Success");
+        return navigate("/profile");
+      } else {
         alert("Update Failed");
       }
     };
     dispatch(
       updateProfile(user_id, update, handleSuccess)
     )
-
-    // axios
-    //   .put(
-    //     `${process.env.REACT_APP_BACKEND_URL}/user/update/${user.user_id}`,
-    //     update,
-    //     {
-    //       // headers: {
-    //       //   "Content-Type": "multipart/form-data",
-    //       // },
-    //     }
-    //   )
-      // .then((res) => {
-      //   console.log(res);
-      //   // setImage("");
-      // })
-      // .catch((err) => {
-      //   console.log(err);
-      //   alert("Update Failed");
-      // });
   };
+
+  const handleDelete = () => {
+    const data = JSON.parse(localStorage.getItem("user_id"));
+    const user_id = data.user_id;
+    const handleSuccess = (data) => {
+      console.log(data);
+      if (data) {
+        alert("Delete Success");
+        return navigate("/login");
+      } else {
+        alert("Delete Failed");
+      }
+    };
+    dispatch(
+      deleteProfile(user_id, handleSuccess)
+    )
+  }
 
   // const deletedataProfile = (user_id) = { 
   //   // axios 
@@ -88,7 +103,7 @@ const Profile = () => {
 
   return (
     <>
-      {localStorage.token ? <NavbarLogin/> : <Navbar/>}
+      {localStorage.token ? <NavbarLogin /> : <Navbar />}
       {/* {JSON.stringify(user)} */}
       <main className="bodycontent">
         <div className="container my-5">
@@ -119,7 +134,8 @@ const Profile = () => {
                           id="email"
                           name="email"
                           onChange={handleInput}
-                          placeholder={user.email}
+                          placeholder={data.email}
+                          disabled
                         />
                         <label
                           htmlFor="phone"
@@ -133,7 +149,7 @@ const Profile = () => {
                           id="phone"
                           name="phone"
                           onChange={handleInput}
-                          placeholder={user.phone}
+                          placeholder={data.phone}
                         />
                         <div className="d-flex flex-row">
                           <p className="col-md-5"></p>
@@ -162,7 +178,7 @@ const Profile = () => {
                           id="username"
                           name="username"
                           onChange={handleInput}
-                          placeholder={user.username}
+                          placeholder={data.username}
                         />
 
                         <label
@@ -178,7 +194,7 @@ const Profile = () => {
                           id="city"
                           name="city"
                           onChange={handleInput}
-                          placeholder={user.city}
+                          placeholder={data.city}
                         />
 
                         <label
@@ -194,7 +210,7 @@ const Profile = () => {
                           id="address"
                           name="address"
                           onChange={handleInput}
-                          placeholder={user.address}
+                          placeholder={data.address}
                         />
 
                         <label
@@ -209,22 +225,21 @@ const Profile = () => {
                           id="Postcode"
                           name="postcode"
                           onChange={handleInput}
-                          placeholder={user.postcode}
+                          placeholder={data.postcode}
                         />
                       </div>
                       <div className=" d-grid gap-2 d-md-flex justify-content-md-end me-5">
                         <button type="submit" className="btn btn-primary mt-3 ">
                           Save
                         </button>
-                        
+
                       </div>
                     </div>
                   </div>
                 </form>
-
-                <button  className="btn btn-primary mt-3 btn-danger" onClick={(e) => deleteProfile(user_id, e)}>
-                          Delete
-                        </button>
+                {/* <button className="btn btn-primary mt-3 btn-danger" onClick={(e) => handleDelete(e)}>
+                  Delete
+                </button> */}
               </div>
             </div>
           </div>

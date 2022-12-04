@@ -88,19 +88,19 @@ const Home = () => {
                   <div className="d-flex flex-row">
                     <div className="form-check mx-auto">
                       <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                      <label className={styles.labelCheck} for="flexRadioDefault1">
+                      <label className={styles.labelCheck} htmlFor="flexRadioDefault1">
                         Economy
                       </label>
                     </div>
                     <div className="form-check mx-auto">
                       <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                      <label className={styles.labelCheck} for="flexRadioDefault1">
+                      <label className={styles.labelCheck} htmlFor="flexRadioDefault1">
                         Business
                       </label>
                     </div>
                     <div className="form-check mx-auto">
                       <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                      <label className={styles.labelCheck} for="flexRadioDefault1">
+                      <label className={styles.labelCheck} htmlFor="flexRadioDefault1">
                         First Class
                       </label>
                     </div>

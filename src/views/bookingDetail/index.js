@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./bookingDetail.module.css";
 import AirlineGaruda from '../../assets/airline.png'
 import Navbar from '../../components/module/navbar';
@@ -7,11 +7,33 @@ import Option from '../../assets/iconOption.svg'
 import Qrcode from '../../assets/QRCode1.svg'
 import iconflight from '../../assets/flight.svg'
 import NavbarLogin from '../../components/module/navbarLogin';
+import axios from 'axios';
+import { useNavigate, useParams } from 'react-router-dom';
 
 
 const BookingDetail = () => {
+  const navigate = useNavigate()
+
+  const [loading, setLoading] = useState(false)
+  const [data, setData] = useState([])
+  const { id } = useParams();
+
+  useEffect(() => {
+    setLoading(true)
+    axios
+      .get(`https://dead-rose-train.cyclic.app/v1/admin/booking/${id}`)
+      .then((response) => {
+        console.log(response.data.data);
+        setData(response.data.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+    setLoading(false)
+  }, [])
   return (
     <>
+    {/* {JSON.stringify(data)} */}
       {localStorage.token ? <NavbarLogin/> : <Navbar/>}
       <main className='bodycontent'>
         <div className={`container-fluid ${styles.ticket}`}>
@@ -26,16 +48,16 @@ const BookingDetail = () => {
                   <div className={`col-md-7 ${styles.ticketleft}`}>
                     <div className='d-flex flex-row'>
                       <div className={`col-md-4 ${styles.iconAirline}`}>
-                        <img src={AirlineGaruda} />
+                        <img src={data.logo_url} />
                       </div>
                       <div className='col-md-2 mt-3'>
-                        <h4>IDN</h4>
+                        <h4>{data.arrival_city} ({data.arrival_country})</h4>
                       </div>
                       <div className='col-md-2 mt-3'>
-                        <img src={iconflight} className="ms-3" />
+                        <img src={iconflight} className="mx-4" />
                       </div>
                       <div className='col-md-2 mt-3'>
-                        <h4>JPN</h4>
+                        <h4>{data.departure_city} ({data.departure_country})</h4>
                       </div>
                     </div>
                     <div className='d-flex flex-row'>
@@ -51,11 +73,11 @@ const BookingDetail = () => {
                     <div className='d-flex flex-row'>
                       <div className='col-md-6 mt-2'>
                         <p className={styles.terminal}>Terminal</p>
-                        <p className={styles.setterminal}>A</p>
+                        <p className={styles.setterminal}>{data.gate}</p>
                       </div>
                       <div className='col-md-6 mt-2'>
                         <p className={styles.gate}>Gate</p>
-                        <p className={styles.setgate}>221</p>
+                        <p className={styles.setgate}>{data.terminal}</p>
                       </div>
                     </div>
                     <div className='d-flex flex-row'>

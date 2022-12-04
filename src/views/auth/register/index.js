@@ -76,7 +76,7 @@ const Register = () => {
                 </div>
                 <div className="d-flex flex-column col-md-10">
                   <form onSubmit={(e) => handleSubmit(e)}>
-                    <div class="form-floating mb-3">
+                    <div className="form-floating mb-3">
                       <input
                         type="text"
                         className={`form-control  ${styles.formInput}`}
@@ -87,7 +87,7 @@ const Register = () => {
                       <label htmlFor="username">Full Name</label>
                     </div>
 
-                    <div class="form-floating mb-3">
+                    <div className="form-floating mb-3">
                       <input
                         type="email"
                         className={`form-control  ${styles.formInput}`}
@@ -98,7 +98,7 @@ const Register = () => {
                       <label htmlFor="email">Email address</label>
                     </div>
 
-                    <div class="form-floating mb-3">
+                    <div className="form-floating mb-3">
                       <input
                         type="text"
                         className={`form-control  ${styles.formInput}`}
@@ -109,7 +109,7 @@ const Register = () => {
                       <label htmlFor="phone">Phone</label>
                     </div>
 
-                    <div class="form-floating mb-3">
+                    <div className="form-floating mb-3">
                       <input
                         type="password"
                         className={`form-control  ${styles.formInput}`}
@@ -119,8 +119,8 @@ const Register = () => {
                       />
                       <label htmlFor="password">Password</label>
                     </div>
-                    <div class="d-grid gap-2 col-12 mx-auto my-4 ">
-                      <button class={styles.btnlogin} type="submit">
+                    <div className="d-grid gap-2 col-12 mx-auto my-4 ">
+                      <button className={styles.btnlogin} type="submit">
                         Sign Up
                       </button>
                     </div>
@@ -139,7 +139,7 @@ const Register = () => {
                   </div>
                   <hr />
                   <p className="text-center">Already have an account?</p>
-                  <button class={styles.btnsignin} type="button">
+                  <button className={styles.btnsignin} type="button">
                     Sign in
                   </button>
                 </div>

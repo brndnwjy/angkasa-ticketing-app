@@ -76,15 +76,15 @@ const FlightDetail = () => {
               <p className={`mt-5 ${styles.textTitle}`}>Passenger Details</p>
               <div className={`p-4 ${styles.passengerDetail}`}>
                 <div className="d-flex flex-row">
-                  <input class="form-check-input mt-1 me-3" type="checkbox" value="" aria-label="Checkbox for following text input" />
+                  <input className="form-check-input mt-1 me-3" type="checkbox" value="" aria-label="Checkbox for following text input" />
                   <p className={styles.textInsurance}>Travel Insurance</p>
                   <p className={`ms-auto ${styles.textPriceinsurance}`}>$ 2,00</p> <p className={`mt-1 ${styles.textPax}`}>/pax</p>
                 </div>
                 <hr />
                 <p className={styles.textCompensation}>Get travel compensation up to $ 10.000,00</p>
               </div>
-              <div class="d-grid gap-2 col-6 mt-5 mx-auto">
-                <button class={`btn ${styles.cstmButton}`} type="button">Proceed to Payment</button>
+              <div className="d-grid gap-2 col-6 mt-5 mx-auto">
+                <button className={`btn ${styles.cstmButton}`} type="button">Proceed to Payment</button>
               </div>
             </div>
             <div className={`col-md-4 p-4 ${styles.rightside}`}>

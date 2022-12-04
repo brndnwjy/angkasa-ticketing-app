@@ -24,15 +24,30 @@
     font-weight: bold;
 }
 
-.statuspayment{
+/* .statuspayment{
     background-color: #FF7F23 ; 
     height: 36px; 
     border-radius: 5px;
     justify-items: center;
     margin-top: -15px;
-}
+} */
 
 .setStatus{
+    background-color: #4FCF4D ; 
+    height: 36px; 
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF ;
+    margin-top: 5px;
+    text-align: center;
+    align-items: center !important;
+}
+
+.setStatus2{
+    background-color: #FF7F23 ; 
+    height: 36px; 
+    border-radius: 5px;
     font-size: 15px;
     font-weight: bold;
     color: #FFFFFF ;

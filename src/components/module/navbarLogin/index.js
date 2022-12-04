@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../navbarLogin/navbarLogin.module.css';
 import logo from '../../../assets/logo.svg';
 import icMail from '../../../assets/mail.svg'
@@ -6,9 +6,32 @@ import icNotif from '../../../assets/notification.svg'
 import icAva from '../../../assets/avatar.png'
 
 import { Link, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import axios from 'axios';
 
 const NavbarLogin = () => {
   const navigate = useNavigate();
+
+  const { data: user } = useSelector((state) => state.user.user)
+  // console.log(user.user_id)
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false)
+  const id = user.user_id
+  // console.log(id)
+  useEffect(() => {
+    setLoading(true)
+    axios
+      .get(`https://dead-rose-train.cyclic.app/v1/user/${id}`)
+      .then((response) => {
+        console.log(response.data.data);
+        setData(response.data.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+    setLoading(false)
+  }, []);
+
 
 const handleLogout = () => {
   localStorage.clear();
@@ -64,7 +87,7 @@ const handleLogout = () => {
                   type="button"
                   data-bs-toggle="dropdown"
                 >
-                  <img src={icAva} alt="icCart" className={styles.cstmAva} style={{height: '30px'}} />
+                  <img src={data.ava_url} alt="icCart" className={styles.cstmAva} style={{height: '30px', borderRadius:"100%"}} />
                 </button>
                 <ul className="dropdown-menu">
                   <li>
@@ -76,7 +99,7 @@ const handleLogout = () => {
                     <Link
                       onClick={handleLogout}
                       className="dropdown-item"
-                      to="#"
+                      to={"/login"}
                     >
                       Logout
                     </Link>

@@ -91,7 +91,7 @@ const Search = () => {
                     <img src={iconarrowbtm} className={`ms-2 mb-2 ${styles.arrowbtm}`}></img>
                   </button>
                 </div>
-                <div class="collapse" id="Transit">
+                <div className="collapse" id="Transit">
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 mt-3 ${styles.valuecollapse}`}>Direct </p>
                     <input className="form-check-input me-1 mt-3" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
@@ -112,7 +112,7 @@ const Search = () => {
                     <img src={iconarrowbtm} className={`ms-2 mb-2 ${styles.arrowbtm}`}></img>
                   </button>
                 </div>
-                <div class="collapse" id="Fascilities">
+                <div className="collapse" id="Fascilities">
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 mt-3 ${styles.valuecollapse}`}>Luggage </p>
                     <input className="form-check-input me-1 mt-3" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
@@ -134,7 +134,7 @@ const Search = () => {
                     <img src={iconarrowbtm} className={`ms-2 mb-2 ${styles.arrowbtm}`}></img>
                   </button>
                 </div>
-                <div class="collapse" id="DepatureTime">
+                <div className="collapse" id="DepatureTime">
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 mt-3 ${styles.valuecollapse}`}>00:00 - 06:00 </p>
                     <input className="form-check-input me-1 mt-3" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
@@ -160,7 +160,7 @@ const Search = () => {
                     <img src={iconarrowbtm} className={`ms-2 mb-2 ${styles.arrowbtm}`}></img>
                   </button>
                 </div>
-                <div class="collapse" id="Arrived">
+                <div className="collapse" id="Arrived">
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 mt-3 ${styles.valuecollapse}`}>00:00 - 06:00 </p>
                     <input className="form-check-input me-1 mt-3" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
@@ -186,7 +186,7 @@ const Search = () => {
                     <img src={iconarrowbtm} className={`ms-2 mb-2 ${styles.arrowbtm}`}></img>
                   </button>
                 </div>
-                <div class="collapse" id="collapseAirlines">
+                <div className="collapse" id="collapseAirlines">
                   <div className='d-flex flex-row'>
                     <p className={`col-md-11 mt-3 ${styles.valuecollapse}`}>Garuda Indonesia </p>
                     <input className="form-check-input me-1 mt-3" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
@@ -208,7 +208,7 @@ const Search = () => {
                     <img src={iconarrowbtm} className={`ms-2 mb-2 ${styles.arrowbtm}`}></img>
                   </button>
                 </div>
-                <div class="collapse" id="collapsePrice">
+                <div className="collapse" id="collapsePrice">
                   <div className='d-flex flex-row'>
                     <p className={`col-md-9 mt-3 ${styles.setPrice}`}>Lowest </p>
                     <p className={`ms-4 mt-3 ${styles.setPrice}`}>Highest </p>

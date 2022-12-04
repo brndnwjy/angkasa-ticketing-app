@@ -29,13 +29,13 @@ const ForgotPassword = () => {
                 </p>
               </div>
               <div className="d-flex flex-column col-md-10">
-                <div class="form-floating mb-3">
+                <div className="form-floating mb-3">
                   <input type="email"className={`form-control  ${styles.formInput}`} id="floatingPassword" placeholder="name@example.com" />
-                  <label for="floatingInput">Email address</label>
+                  <label htmlFor="floatingInput">Email address</label>
                 </div>
                 
-                <div class="d-grid gap-2 col-12 mx-auto my-4 ">
-                  <button class={styles.btnlogin} type="button">Send</button>
+                <div className="d-grid gap-2 col-12 mx-auto my-4 ">
+                  <button className={styles.btnlogin} type="button">Send</button>
                 </div>
                 <div className='d-flex flex-column align-items-center justify-content-center mb-5'>
                   <p className={styles.forgot}> You’ll get message soon on your email </p>
