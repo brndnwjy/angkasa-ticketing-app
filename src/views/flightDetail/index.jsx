@@ -240,6 +240,8 @@ const FlightDetail = () => {
                       aria-label="Checkbox for following text input"
                       name="travel_insurance"
                       id="travel_insurance"
+                      checked
+                      disabled
                       onClick={handleInput}
                     />
                     <p className={styles.textInsurance}>Travel Insurance</p>
@@ -282,7 +284,7 @@ const FlightDetail = () => {
                 </div>
                 <div className="d-flex flex-row mt-3">
                   <img src={ceklis} alt="dot" className="mx-3" />
-                  <div className={styles.textOptional}>Refundable</div>
+                  <div className={styles.textOptional}>can reschedule</div>
                 </div>
                 <hr />
                 <div className="d-flex flex-row mt-3">
