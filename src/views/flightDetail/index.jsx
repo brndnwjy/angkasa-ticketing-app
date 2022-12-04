@@ -11,7 +11,7 @@ import icDot from "../../assets/icDot.svg";
 import icDown from "../../assets/btnback.svg";
 
 // import v from '../../assets/btnback.png';
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import NavbarLogin from "../../components/module/navbarLogin";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
@@ -19,6 +19,7 @@ import axios from "axios";
 import { useState } from "react";
 
 const FlightDetail = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const idUser = useSelector((state) => state.user.user.data.user_id);
   const dataUser = useSelector((state) => state.user.user.data);
@@ -108,6 +109,7 @@ const FlightDetail = () => {
     .post(`https://dead-rose-train.cyclic.app/v1/booking/`, body)
     .then((response)=>{
       console.log(response.data)
+      return navigate('/mybooking')
     })
     .catch((err)=>{
       console.log(err)
