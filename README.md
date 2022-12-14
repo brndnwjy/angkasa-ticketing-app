@@ -1,6 +1,9 @@
 # Angkasa (Frontend)
 
 <!-- Logo -->
+<div align="center">
+<img src="./documentation/logo.svg" align="center" width="200" height="auto" />
+</div>
 
 <!-- Table of Contents -->
 ## Table of Contents
@@ -104,6 +107,43 @@ Contributions are what make the open source community such an amazing place to b
 
 <!-- Screenshoots -->
 ## Screenshoots
+<table>
+  <tr>
+    <td><image src="./documentation/register.jpeg" alt="Register" width=100% ></td>
+    <td><image src="./documentation/login.jpeg" alt="Login" width=100%/></td>
+  </tr>
+  <tr>
+    <td align="center">Register</td>
+    <td align="center">Login</td>
+  </tr>
+  
+  <tr>
+    <td><image src="./documentation/landing.jpeg" alt="Landing Page" width=100%></td>
+    <td><image src="./documentation/search.jpeg" alt="Search Page" width=100%></td>
+  </tr>
+  <tr>
+      <td align="center">Landing Page</td>
+      <td align="center">Search Page</td>
+  </tr>
+
+  <tr>
+    <td><image src="./documentation/booking.jpeg" alt="Booking" width=100%></td>
+    <td><image src="./documentation/booking-detail.jpeg" alt="Booking Detail" width=100%/></td>
+  </tr>
+   <tr>
+    <td align="center">Booking</td>
+    <td align="center">Booking Detail</td>
+  </tr>
+  
+  <tr>
+    <td><image src="./documentation/profile.jpeg" alt="Profile Detail" width=100%></td>
+    <td><image src="./documentation/my-booking.jpeg" alt="My Booking" width=100%></td>
+  </tr>
+  <tr>
+      <td align="center">Profile</td>
+       <td align="center">My Booking</td>
+  </tr>
+</table>
 
 
 <!-- Related Projects -->
