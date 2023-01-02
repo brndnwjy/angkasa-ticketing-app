@@ -128,7 +128,7 @@ Contributions are what make the open source community such an amazing place to b
 
   <tr>
     <td><image src="./documentation/booking.png" alt="Booking" width=100%></td>
-    <td><image src="./documentation/booking-detail.png" alt="Booking Detail" width=100%/></td>
+    <td><image src="./documentation/booking-detail.jpeg" alt="Booking Detail" width=100%/></td>
   </tr>
    <tr>
     <td align="center">Booking</td>
